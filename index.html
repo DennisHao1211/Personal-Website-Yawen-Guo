@@ -177,6 +177,11 @@ figcaption b{color:var(--ink);font-weight:600}
 }
 .note .slot{aspect-ratio:1;margin:0}
 .note.text-only{grid-template-columns:1fr}
+.sub{font-family:"Archivo",sans-serif;font-size:13.5px;font-weight:600;color:var(--leaf);margin:40px 0 4px}
+.sub-note{font-family:"Archivo",sans-serif;font-size:12.5px;color:var(--ink-2);margin:0 0 12px;max-width:64ch}
+.chars{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+main .chars figure img{aspect-ratio:3/4;object-fit:contain;background:#fff;border:1px solid var(--rule)}
+@media(max-width:860px){.chars{grid-template-columns:repeat(3,1fr)}}
 .note h3{
   font-family:"Archivo",sans-serif;font-size:13.5px;font-weight:600;
   margin:0 0 7px;color:var(--rust);
@@ -696,7 +701,7 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
 </g></svg>
     <div class="sec-meta">
       <b>Drawn from Life</b>
-      Watercolor &amp; paint<br>
+      Watercolor, paint &amp; digital<br>
       Since <span class="todo">[20XX]</span>
     </div>
     <div>
@@ -710,6 +715,7 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
       <dl>
         <dt>Method</dt>
         <dd>From life and from my own reference photos</dd>
+        <dd>Character designs built on real animals</dd>
         <dt>Also</dt>
         <dd>School newspaper, art editor</dd>
         <dd>Commissioned work</dd>
@@ -729,7 +735,7 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
       <div class="grid-3" style="margin-top:22px">
         <figure>
           <img class="tall" src="media/art/drawing2.jpg" alt="Painting of a small white bird inside a corked glass bottle tossed in a breaking turquoise wave." loading="lazy">
-          <figcaption><b><i>Freedom in a Bottle</i>, <span class="todo">[medium]</span>.</b> An imagined scene, and the one piece here not drawn from life.</figcaption>
+          <figcaption><b><i>Freedom in a Bottle</i>, <span class="todo">[medium]</span>.</b> The one piece here not drawn from life: a small bird sealed in a bottle on a breaking wave, painted about wanting to be free.</figcaption>
         </figure>
         <figure>
           <img class="tall" src="media/art/cat-studies.jpg" alt="Digital drawings of three cats in different poses and coat colors, numbered 1 to 3." loading="lazy" style="object-fit:contain;background:#fff">
@@ -739,6 +745,17 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
           <img class="tall" src="media/art/wolf.jpg" alt="Digital drawing of a grey wolf mid-stride against a pale purple circle." loading="lazy">
           <figcaption><b>Wolf, digital.</b> Character design, built on real canine proportions.</figcaption>
         </figure>
+      </div>
+
+      <h3 class="sub">Characters built from animals</h3>
+      <p class="sub-note">Digital character designs. Each one starts from a real animal, and the anatomy has to stay readable even when the style is not realistic.</p>
+      <div class="chars">
+        <figure><img src="media/art/char-gecko.jpg" alt="Character design with a long, spotted, banded leopard gecko tail." loading="lazy"><figcaption><b>Leopard gecko</b> tail</figcaption></figure>
+        <figure><img src="media/art/char-mantis.jpg" alt="Character design with long antennae and large veined insect wings." loading="lazy"><figcaption><b>Mantis</b> wings</figcaption></figure>
+        <figure><img src="media/art/char-rabbit.jpg" alt="Character sheet for Kael Vane, a cottontail rabbit character, with color palette." loading="lazy"><figcaption><b>Cottontail rabbit</b></figcaption></figure>
+        <figure><img src="media/art/char-lynx.jpg" alt="Character design wearing a hat with tufted lynx ears." loading="lazy"><figcaption><b>Lynx</b> ear tufts</figcaption></figure>
+        <figure><img src="media/art/char-ram.jpg" alt="Character design with curled ram horns." loading="lazy"><figcaption><b>Ram</b> horns</figcaption></figure>
+        <figure><img src="media/art/char-cat.jpg" alt="Cat character with clover in its fur and a ladybug on its head." loading="lazy"><figcaption><b>Cat</b>, with clover and a ladybug</figcaption></figure>
       </div>
     </div>
   </div>
