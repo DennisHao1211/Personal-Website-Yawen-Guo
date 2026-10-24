@@ -159,6 +159,10 @@ figure{margin:0}
 }
 .slot.tall{aspect-ratio:3/4}
 .slot.wide{aspect-ratio:16/9}
+main figure img,main figure video{width:100%;height:auto;border-radius:4px;background:var(--paper-2);object-fit:cover}
+main figure .tall{aspect-ratio:3/4}
+main figure .wide{aspect-ratio:16/9}
+.todo{color:var(--rust);font-style:normal}
 figcaption{
   font-family:"Archivo",sans-serif;font-size:12.5px;color:var(--ink-2);
   margin-top:8px;line-height:1.55;
@@ -172,6 +176,7 @@ figcaption b{color:var(--ink);font-weight:600}
   display:grid;grid-template-columns:180px 1fr;gap:22px;align-items:start;
 }
 .note .slot{aspect-ratio:1;margin:0}
+.note.text-only{grid-template-columns:1fr}
 .note h3{
   font-family:"Archivo",sans-serif;font-size:13.5px;font-weight:600;
   margin:0 0 7px;color:var(--rust);
@@ -427,7 +432,7 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
     </div>
     <div>
       <h2>Who this is</h2>
-      <p>[Text to come]</p>
+      <p>I’m a junior at Archbishop Mitty in San Jose. Most of my time outside school goes to animals: finding them in the field, keeping them at home, drawing them, and bringing them to people.</p>
     </div>
   </div>
 
@@ -435,21 +440,27 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
     <div class="side">
       <dl>
         <dt>Kept at home</dt>
-        <dd>替换：物种 <span class="sci">Genus species</span></dd>
-        <dd>替换：物种 <span class="sci">Genus species</span></dd>
+        <dd>Ball python <span class="sci">Python regius</span></dd>
+        <dd><span class="todo">[Lizard — common name, <i>Genus species</i>]</span></dd>
+        <dd>Spiny flower mantis <span class="sci">Pseudocreobotra</span> sp.</dd>
         <dt>Field hours logged</dt>
-        <dd>替换：约 XXX 小时</dd>
+        <dd><span class="todo">[~XXX hours]</span></dd>
         <dt>Organizations</dt>
-        <dd>替换：机构名称</dd>
+        <dd>Animal Assisted Happiness</dd>
+        <dd>SVACA animal shelter</dd>
+        <dd>Scripps Institution of Oceanography</dd>
+        <dd><span class="todo">[Zoo name]</span> — ambassador animals</dd>
         <dt>Intended study</dt>
         <dd>Zoology</dd><dd>Animal behavior</dd><dd>Wildlife ecology</dd><dd>Marine biology</dd>
       </dl>
     </div>
     <div class="prose">
-      <p>[Text to come]</p>
+      <p>The log in the headline is real. Most of what lives in a California creek or oak woodland spends the day under something — a log, a strip of bark, a rock — and you only meet it if you are slow and patient enough to look, and careful enough to put everything back.</p>
+      <p>At home I keep reptiles and invertebrates, and I keep records on them, because watching the same animal every day tells you things a single encounter never will. I draw what I watch. And at Animal Assisted Happiness I help bring calm animals to kids who need a calm moment.</p>
+      <p>This site collects all four, in that order.</p>
       <figure>
-        <div class="slot wide">portrait or field photo · 1600px wide · WebP</div>
-        <figcaption><b>替换：地点，年份。</b> 一句说明她当时在做什么。</figcaption>
+        <img class="wide" src="media/field/field5.jpg" alt="Yawen crouching on a sandy tidal flat beside two buckets, smiling, holding up a hand line with a small crab on the end." loading="lazy" style="aspect-ratio:4/3;object-position:50% 82%">
+        <figcaption><b>Low tide on the coast.</b> A shore crab on a hand line, about to go into the bucket for a closer look.</figcaption>
       </figure>
     </div>
   </div>
@@ -471,13 +482,13 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
 </g></svg>
     <div class="sec-meta">
       <b>In the Field</b>
-      替换：地点<br>
-      替换：年份区间<br>
-      替换：小时数
+      Creeks, oak woodland, coast<br>
+      Northern California<br>
+      <span class="todo">[20XX–present]</span>
     </div>
     <div>
       <h2>In the Field</h2>
-      <p>[Text to come]</p>
+      <p>Most of my field time is cover-object searching: lifting logs, bark and rocks along creeks and in oak woodland, recording what is underneath, and setting each one back exactly as it was. It is slow work, and it is how I found the salamanders and lizards below.</p>
     </div>
   </div>
 
@@ -485,34 +496,33 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
     <div class="side">
       <dl>
         <dt>Methods</dt>
-        <dd>替换：调查方法</dd>
+        <dd>Cover-object searches</dd>
+        <dd>Shoreline &amp; tidepool observation</dd>
+        <dd>Photo records to iNaturalist</dd>
         <dt>Species recorded</dt>
-        <dd>替换：数量</dd>
-        <dt>Supervised by</dt>
-        <dd>替换：机构 / 导师</dd>
+        <dd><span class="todo">[N] species on iNaturalist</span></dd>
       </dl>
     </div>
     <div>
       <div class="grid-3">
         <figure>
-          <div class="slot tall">照片：坐在枯木上观察</div>
-          <figcaption><b>替换：地点。</b> 一句话。</figcaption>
+          <img class="tall" src="media/field/field1.jpg" alt="Yawen crouching in leaf litter under oaks, wearing blue nitrile gloves and looking closely at the ground." loading="lazy">
+          <figcaption><b>Turning cover.</b> Checking leaf litter and downed wood for salamanders.</figcaption>
         </figure>
         <figure>
-          <div class="slot tall">照片：手持水蛭观察</div>
-          <figcaption><b>替换：物种 <span class="sci">Hirudinea</span>。</b> 一句话。</figcaption>
+          <img class="tall" src="media/field/field2.jpg" alt="Two slender, worm-like brown salamanders with tiny legs resting on a gloved palm." loading="lazy">
+          <figcaption><b>Slender salamanders, <span class="sci">Batrachoseps</span> sp.</b> Two from under one log. They have no lungs and breathe through their skin, so handling stays brief.</figcaption>
         </figure>
         <figure>
-          <div class="slot tall">照片：志愿服务现场</div>
-          <figcaption><b>替换：项目名。</b> 一句话。</figcaption>
+          <img class="tall" src="media/field/field3.jpg" alt="An alligator lizard held loosely in two gloved hands above a grassy clearing with fallen logs." loading="lazy">
+          <figcaption><b>Alligator lizard, <span class="sci">Elgaria</span> sp.</b> Keeled scales and a skin fold along each side: the field marks that separate it from skinks and fence lizards.</figcaption>
         </figure>
       </div>
 
-      <div class="note">
-        <div class="slot">照片：致敏植物 + 手部</div>
+      <div class="note text-only">
         <div>
-          <h3>Field note — 替换：日期</h3>
-          <p>[Text to come]</p>
+          <h3>Field rule</h3>
+          <p>Every log goes back where it was, the same way up. The animals under it depend on a damp microclimate that took months to form, and a log rolled the wrong way can dry out in an afternoon.</p>
         </div>
       </div>
     </div>
@@ -535,53 +545,47 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
 </g></svg>
     <div class="sec-meta">
       <b>At Home</b>
-      替换：饲养年数<br>
-      替换：个体数量<br>
-      替换：物种数
+      Reptiles &amp; invertebrates<br>
+      <span class="todo">[N]</span> animals, <span class="todo">[N]</span> species<br>
+      Logs since <span class="todo">[20XX]</span>
     </div>
     <div>
       <h2>At Home</h2>
-      <p>[Text to come]</p>
+      <p>Home is where I can watch the same animal every day. I keep a log for each one — feeding, weight, sheds, enclosure temperatures — because one observation is a story, and a year of them is data.</p>
     </div>
   </div>
 
   <div class="body-grid">
     <div class="side">
       <dl>
-        <dt>Enclosure</dt>
-        <dd>替换：温梯度</dd>
-        <dd>替换：湿度</dd>
-        <dd>替换：UVB / 光周期</dd>
+        <dt>Python enclosure</dt>
+        <dd>Warm side <span class="todo">[XX °F]</span></dd>
+        <dd>Cool side <span class="todo">[XX °F]</span></dd>
+        <dd>Humidity <span class="todo">[XX–XX %]</span></dd>
         <dt>Records kept since</dt>
-        <dd>替换：年份</dd>
+        <dd><span class="todo">[Month 20XX]</span></dd>
         <dt>Diet</dt>
-        <dd>替换：食物 / 频率</dd>
+        <dd>Frozen-thawed rodents, every <span class="todo">[X]</span> days</dd>
       </dl>
     </div>
     <div>
       <table>
         <tr><th>Individual</th><th>Species</th><th>Since</th><th>What the records show</th></tr>
-        <tr><td>替换</td><td class="sci">替换：学名</td><td>替换</td><td>替换：例如蜕皮间隔从 X 天缩短到 Y 天</td></tr>
-        <tr><td>替换</td><td class="sci">替换：学名</td><td>替换</td><td>替换：例如冬季拒食持续 X 周后自行恢复</td></tr>
-        <tr><td>替换</td><td class="sci">替换：学名</td><td>替换</td><td>替换：例如温梯度调整后活动时段变化</td></tr>
+        <tr><td><span class="todo">[Name]</span></td><td class="sci">Python regius</td><td><span class="todo">[20XX]</span></td><td>Winter fast: refused food for <span class="todo">[X]</span> weeks, weight dropped <span class="todo">[X] g</span>, resumed on its own in <span class="todo">[month]</span>.</td></tr>
+        <tr><td><span class="todo">[Name]</span></td><td class="sci"><span class="todo">[Genus species]</span></td><td><span class="todo">[20XX]</span></td><td>Shed interval went from <span class="todo">[X]</span> to <span class="todo">[Y]</span> days after <span class="todo">[change]</span>.</td></tr>
+        <tr><td><span class="todo">[Name]</span></td><td class="sci">Pseudocreobotra sp.</td><td><span class="todo">[20XX]</span></td><td>Molt dates logged by instar: <span class="todo">[L3 → L4 in X days …]</span></td></tr>
       </table>
-      <p style="font-family:'Archivo',sans-serif;font-size:12.5px;color:var(--ink-2);margin:10px 0 30px">[Text to come]</p>
+      <p style="font-family:'Archivo',sans-serif;font-size:12.5px;color:var(--ink-2);margin:10px 0 30px">Ball pythons often stop eating for weeks in winter. The weight log is how I tell a normal seasonal fast from a sick snake.</p>
 
       <div class="grid-2">
         <figure>
-          <!-- <video src="media/home/shed.mp4" autoplay muted loop playsinline poster="media/home/shed.webp"></video> -->
-          <div class="slot wide">视频：蜕皮 / 进食反应（静音循环，≤10s）</div>
-          <figcaption><b>替换：<span class="sci">Genus species</span>。</b> 一句观察结论，不是"好可爱"。</figcaption>
+          <video class="tall" src="media/home/ball-python.mp4" poster="media/home/ball-python.jpg" autoplay muted loop playsinline aria-label="A yellow ball python wrapping around Yawen's hand and wrist, tongue-flicking."></video>
+          <figcaption><b>Ball python, <span class="sci">Python regius</span>.</b> Tongue-flicking and gripping the hand to explore: a relaxed snake. A stressed ball python does the opposite, coiling into a ball with its head tucked inside.</figcaption>
         </figure>
         <figure>
-          <div class="slot wide">视频：日常行为 / 温区选择</div>
-          <figcaption><b>替换：<span class="sci">Genus species</span>。</b> 一句观察结论。</figcaption>
+          <img class="tall" src="media/field/field4.jpg" alt="A pale green spiny flower mantis nymph standing on a fingertip." loading="lazy">
+          <figcaption><b>Spiny flower mantis nymph, <span class="sci">Pseudocreobotra</span> sp.</b> The spines on the abdomen are part of a flower disguise. The eyespots it is named for appear on the wings only at the final molt.</figcaption>
         </figure>
-      </div>
-      <div class="grid-3" style="margin-top:16px">
-        <figure><div class="slot tall">照片：个体特写</div><figcaption>替换</figcaption></figure>
-        <figure><div class="slot tall">照片：饲养环境全景</div><figcaption>替换</figcaption></figure>
-        <figure><div class="slot tall">照片：记录本 / 数据表实拍</div><figcaption>替换</figcaption></figure>
       </div>
     </div>
   </div>
@@ -608,13 +612,12 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
 </g></svg>
     <div class="sec-meta">
       <b>Drawn from Life</b>
-      替换：作品数量<br>
-      替换：媒介<br>
-      Since 替换：年份
+      Watercolor &amp; paint<br>
+      Since <span class="todo">[20XX]</span>
     </div>
     <div>
       <h2>Drawn from Life</h2>
-      <p>[Text to come]</p>
+      <p>Drawing is how I look at an animal long enough to actually see it. A photo records a nestling in a fraction of a second; painting it means working out how the feathers clump, where the beak folds at the corner of the mouth, and how the body sits in the nest.</p>
     </div>
   </div>
 
@@ -622,7 +625,7 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
     <div class="side">
       <dl>
         <dt>Method</dt>
-        <dd>替换：现场写生 / 照片参考 / 标本</dd>
+        <dd>From life and from my own reference photos</dd>
         <dt>Also</dt>
         <dd>School newspaper, art editor</dd>
         <dd>Commissioned work</dd>
@@ -630,17 +633,14 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
     </div>
     <div>
       <div class="grid-2">
-        <figure><div class="slot">照片：她拍的实物</div><figcaption>Observed · 替换：物种、地点、日期</figcaption></figure>
-        <figure><div class="slot">作品：对应的写生</div><figcaption>Drawn · 替换：日期、媒介</figcaption></figure>
-      </div>
-      <div class="grid-2" style="margin-top:22px">
-        <figure><div class="slot">照片：她拍的实物</div><figcaption>Observed · 替换：物种、地点、日期</figcaption></figure>
-        <figure><div class="slot">作品：对应的写生</div><figcaption>Drawn · 替换：日期、媒介</figcaption></figure>
-      </div>
-      <div class="grid-3" style="margin-top:22px">
-        <figure><div class="slot tall">作品</div><figcaption>替换</figcaption></figure>
-        <figure><div class="slot tall">作品</div><figcaption>替换</figcaption></figure>
-        <figure><div class="slot tall">作品</div><figcaption>替换</figcaption></figure>
+        <figure>
+          <img class="tall" src="media/art/drawing1.jpg" alt="Watercolor of two hummingbird nestlings in a small cup nest on a branch, beaks pointed up and open." loading="lazy">
+          <figcaption><b>Hummingbird nestlings, watercolor.</b> Two chicks in a cup of plant down and spider silk, beaks up and open.</figcaption>
+        </figure>
+        <figure>
+          <img class="tall" src="media/art/drawing2.jpg" alt="Painting of a small white bird inside a corked glass bottle tossed in a breaking turquoise wave." loading="lazy">
+          <figcaption><b>Bird in a bottle, <span class="todo">[medium]</span>.</b> An imagined scene, and the one piece here not drawn from life.</figcaption>
+        </figure>
       </div>
     </div>
   </div>
@@ -665,12 +665,12 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
     <div class="sec-meta">
       <b>With People</b>
       Animal Assisted Happiness<br>
-      替换：年份区间<br>
-      替换：累计小时
+      Sunnyvale, California<br>
+      <span class="todo">[20XX–present · XXX hours]</span>
     </div>
     <div>
       <h2>With People</h2>
-      <p>[Text to come]</p>
+      <p>Animal Assisted Happiness brings farm animals to children and families facing illness, disability and hard times, at its farm and at schools and community events. Most of my job is reading the animal: knowing which rabbit or guinea pig will sit calmly in a stranger’s lap today, and which one needs to go back to its pen.</p>
     </div>
   </div>
 
@@ -682,22 +682,31 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
         <dd>Volunteer trainer</dd>
         <dd>Tour lead</dd>
         <dt>Settings</dt>
-        <dd>替换：农场、学校、医院、图书馆</dd>
+        <dd>The farm in Sunnyvale</dd>
+        <dd>School and community events</dd>
       </dl>
     </div>
     <div>
-      <div class="grid-2">
-        <figure><div class="slot wide">视频/照片：带参观或做 therapy</div>
-          <figcaption><b>替换：地点、年份。</b> 一句说明当时在做什么。</figcaption></figure>
-        <figure><div class="slot wide">视频/照片：与动物互动</div>
-          <figcaption><b>替换：物种。</b> 一句说明。</figcaption></figure>
+      <figure>
+        <img class="wide" src="media/people/people1.jpg" alt="Yawen sitting on a bench at the AAH farm with a guinea pig in a fleece bed on her lap while three young children look on." loading="lazy" style="object-position:50% 60%">
+        <figcaption><b>At the AAH farm.</b> Introducing a guinea pig to young visitors: one hand under, one resting over the back, so it feels secure enough to stay still.</figcaption>
+      </figure>
+      <div class="grid-2" style="margin-top:22px">
+        <figure>
+          <img class="tall" src="media/people/people2.jpg" alt="Yawen lifting a buff-colored hen into a wire crate at an outdoor event, with a white rabbit on a mat in front." loading="lazy">
+          <figcaption><b>Outreach event.</b> Returning a hen to her crate. Chickens settle when their wings are held closed against the body.</figcaption>
+        </figure>
+        <figure>
+          <img class="tall" src="media/people/people3.jpg" alt="Two volunteers in AAH hoodies at a table with two white rabbits resting on woven mats, one with a name tag." loading="lazy">
+          <figcaption><b>Rabbit station.</b> Each animal gets its own mat and a name tag, so visitors meet them as individuals.</figcaption>
+        </figure>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <div>[email] · <a href="#">iNaturalist</a></div>
+  <div><span class="todo">[email]</span> · <a href="#">iNaturalist</a> <span class="todo">[profile link]</span></div>
   <svg class="sleepy" viewBox="0 0 130 70" aria-hidden="true" focusable="false">
 <path class="o" fill="#F7DCC4" d="M20 64 C8 50 22 30 52 30 C86 30 112 40 112 56 C112 64 104 66 96 66 L28 66 Z"/>
 <path fill="none" style="stroke:#2E3A34;stroke-width:9;stroke-linecap:round" d="M100 60 C118 58 120 44 108 40"/><path fill="none" style="stroke:#F7DCC4;stroke-width:4.4;stroke-linecap:round" d="M100 60 C118 58 120 44 108 40"/>
