@@ -240,7 +240,7 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
   .sec-meta{order:2}
   .grid-3{grid-template-columns:repeat(2,1fr)}
   .note{grid-template-columns:1fr}
-  .note .slot{max-width:200px}
+  .note .slot,.note>img{max-width:200px}
   .nav-inner{height:auto;flex-wrap:wrap;gap:4px 14px;padding:10px 20px}
   section{scroll-margin-top:98px}
   .nav-name{font-size:19px}
@@ -441,15 +441,18 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
       <dl>
         <dt>Kept at home</dt>
         <dd>Ball python <span class="sci">Python regius</span></dd>
-        <dd><span class="todo">[Lizard — common name, <i>Genus species</i>]</span></dd>
+        <dd><span class="todo">[White snake — species]</span></dd>
+        <dd>Leopard gecko <span class="sci">Eublepharis macularius</span></dd>
+        <dd>Alligator lizard <span class="sci">Elgaria</span> sp.</dd>
         <dd>Spiny flower mantis <span class="sci">Pseudocreobotra</span> sp.</dd>
+        <dd>Jumping spider <span class="sci">Phidippus</span> sp.</dd>
         <dt>Field hours logged</dt>
         <dd><span class="todo">[~XXX hours]</span></dd>
         <dt>Organizations</dt>
         <dd>Animal Assisted Happiness</dd>
         <dd>SVACA animal shelter</dd>
         <dd>Scripps Institution of Oceanography</dd>
-        <dd><span class="todo">[Zoo name]</span> — ambassador animals</dd>
+        <dd>San Francisco Zoo</dd>
         <dt>Intended study</dt>
         <dd>Zoology</dd><dd>Animal behavior</dd><dd>Wildlife ecology</dd><dd>Marine biology</dd>
       </dl>
@@ -518,6 +521,28 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
           <figcaption><b>Alligator lizard, <span class="sci">Elgaria</span> sp.</b> Keeled scales and a skin fold along each side: the field marks that separate it from skinks and fence lizards.</figcaption>
         </figure>
       </div>
+      <div class="grid-3" style="margin-top:16px">
+        <figure>
+          <video class="tall" src="media/field/banana-slug-moving.mp4" poster="media/field/banana-slug-moving.jpg" autoplay muted loop playsinline aria-label="A spotted banana slug gliding across bare soil."></video>
+          <figcaption><b>Banana slug, <span class="sci">Ariolimax</span> sp.</b> The slime is how it moves and how it finds others: banana slugs follow each other’s mucus trails.</figcaption>
+        </figure>
+        <figure>
+          <img class="tall" src="media/field/millipede.jpg" alt="A black millipede with pale yellow spots along its sides crawling through low green plants and leaf litter." loading="lazy">
+          <figcaption><b>Yellow-spotted millipede, <span class="sci">Harpaphe haydeniana</span>. April 2020.</b> The spots are a warning: it releases hydrogen cyanide when disturbed, which is why it smells of almonds.</figcaption>
+        </figure>
+        <figure>
+          <img class="tall" src="media/field/redwood-creek.jpg" alt="A shaded redwood canyon with a rocky creek bed and ferns along the banks." loading="lazy">
+          <figcaption><b>Habitat.</b> A redwood creek canyon: cool, shaded, and damp enough under the logs for lungless salamanders.</figcaption>
+        </figure>
+      </div>
+
+      <div class="note">
+        <img src="media/field/rash.jpg" alt="The back of a hand and wrist with a line of red, raised blisters." loading="lazy" style="aspect-ratio:1;object-fit:cover;border-radius:4px">
+        <div>
+          <h3>Field note — poison oak, <span class="todo">[date]</span></h3>
+          <p>Poison oak (<span class="sci">Toxicodendron diversilobum</span>) grows in exactly the shaded oak woodland where the salamanders live, and this is what it did to the back of my hand. Avoiding it is now part of the method: long sleeves over the glove cuffs, and gloves peeled off inside-out at the end of a search.</p>
+        </div>
+      </div>
 
       <div class="note text-only">
         <div>
@@ -546,8 +571,8 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
     <div class="sec-meta">
       <b>At Home</b>
       Reptiles &amp; invertebrates<br>
-      <span class="todo">[N]</span> animals, <span class="todo">[N]</span> species<br>
-      Logs since <span class="todo">[20XX]</span>
+      <span class="todo">[N]</span> animals, 6 species<br>
+      Mantids since 2021
     </div>
     <div>
       <h2>At Home</h2>
@@ -572,8 +597,11 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
       <table>
         <tr><th>Individual</th><th>Species</th><th>Since</th><th>What the records show</th></tr>
         <tr><td><span class="todo">[Name]</span></td><td class="sci">Python regius</td><td><span class="todo">[20XX]</span></td><td>Winter fast: refused food for <span class="todo">[X]</span> weeks, weight dropped <span class="todo">[X] g</span>, resumed on its own in <span class="todo">[month]</span>.</td></tr>
-        <tr><td><span class="todo">[Name]</span></td><td class="sci"><span class="todo">[Genus species]</span></td><td><span class="todo">[20XX]</span></td><td>Shed interval went from <span class="todo">[X]</span> to <span class="todo">[Y]</span> days after <span class="todo">[change]</span>.</td></tr>
-        <tr><td><span class="todo">[Name]</span></td><td class="sci">Pseudocreobotra sp.</td><td><span class="todo">[20XX]</span></td><td>Molt dates logged by instar: <span class="todo">[L3 → L4 in X days …]</span></td></tr>
+        <tr><td><span class="todo">[Name]</span></td><td class="sci"><span class="todo">[White snake — Genus species]</span></td><td><span class="todo">[20XX]</span></td><td>Frozen-thawed pinkies from tongs every <span class="todo">[X]</span> days; shed interval <span class="todo">[X]</span> days.</td></tr>
+        <tr><td><span class="todo">[Name]</span></td><td class="sci">Eublepharis macularius</td><td><span class="todo">[20XX]</span></td><td>Shed interval went from <span class="todo">[X]</span> to <span class="todo">[Y]</span> days after <span class="todo">[change]</span>.</td></tr>
+        <tr><td><span class="todo">[Name]</span></td><td class="sci">Elgaria sp.</td><td><span class="todo">[20XX]</span></td><td>Live insects from tongs, <span class="todo">[X]</span> per feeding; shed <span class="todo">[date]</span> came off nearly whole.</td></tr>
+        <tr><td><span class="todo">[Name]</span></td><td class="sci">Pseudocreobotra sp.</td><td><span class="todo">[20XX]</span></td><td>Raised from nymph to adult; molt dates logged by instar: <span class="todo">[L3 → L4 in X days …]</span></td></tr>
+        <tr><td><span class="todo">[Name]</span></td><td class="sci">Phidippus sp.</td><td><span class="todo">[20XX]</span></td><td><span class="todo">[What the log shows]</span></td></tr>
       </table>
       <p style="font-family:'Archivo',sans-serif;font-size:12.5px;color:var(--ink-2);margin:10px 0 30px">Ball pythons often stop eating for weeks in winter. The weight log is how I tell a normal seasonal fast from a sick snake.</p>
 
@@ -583,8 +611,46 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
           <figcaption><b>Ball python, <span class="sci">Python regius</span>.</b> Tongue-flicking and gripping the hand to explore: a relaxed snake. A stressed ball python does the opposite, coiling into a ball with its head tucked inside.</figcaption>
         </figure>
         <figure>
+          <video class="tall" src="media/home/snake-shed.mp4" poster="media/home/snake-shed.jpg" autoplay muted loop playsinline aria-label="A complete, translucent snake shed held up by one end and slowly turned."></video>
+          <figcaption><b>A complete shed.</b> One piece, nose to tail, eye caps included: the sign that humidity was right. A shed that comes off in patches means the enclosure was too dry.</figcaption>
+        </figure>
+      </div>
+      <div class="grid-3" style="margin-top:16px">
+        <figure>
+          <img class="tall" src="media/home/leopard-gecko.jpg" alt="Close-up of a pale orange leopard gecko resting on bark, its eye half-lidded." loading="lazy">
+          <figcaption><b>Leopard gecko, <span class="sci">Eublepharis macularius</span>.</b> Unlike most geckos it has movable eyelids and no sticky toe pads: a ground-dweller from dry scrub, not a climber.</figcaption>
+        </figure>
+        <figure>
+          <img class="tall" src="media/home/alligator-lizard.jpg" alt="A banded alligator lizard on orange bark substrate in an enclosure." loading="lazy">
+          <figcaption><b>Alligator lizard, <span class="sci">Elgaria</span> sp.</b> A native California species, the same genus I find under logs in the field.</figcaption>
+        </figure>
+        <figure>
+          <img class="tall" src="media/home/white-snake.jpg" alt="A slender white snake climbing a piece of driftwood in an enclosure with aspen bedding." loading="lazy">
+          <figcaption><b><span class="todo">[White snake — common name, <i>Genus species</i>]</span>.</b> Climbing driftwood: given the height, it uses all of it.</figcaption>
+        </figure>
+      </div>
+      <div class="grid-3" style="margin-top:16px">
+        <figure>
+          <video class="tall" src="media/home/lizard-feeding.mp4" poster="media/home/lizard-feeding.jpg" autoplay muted loop playsinline aria-label="Tongs offering food to an alligator lizard in its enclosure."></video>
+          <figcaption><b>Tong feeding.</b> Feeding from tongs lets me log exactly what was eaten, and keeps the lizard from swallowing substrate.</figcaption>
+        </figure>
+        <figure>
+          <img class="tall" src="media/home/lizard-shed.jpg" alt="A shed lizard skin, nearly whole, laid out on white paper." loading="lazy">
+          <figcaption><b>Alligator lizard shed.</b> Lizards usually shed in patches; this one came off nearly whole, down to the toes.</figcaption>
+        </figure>
+        <figure>
+          <video class="tall" src="media/home/jumping-spider.mp4" poster="media/home/jumping-spider.jpg" autoplay muted loop playsinline aria-label="A jumping spider on a leaf inside a clear enclosure, eating an insect."></video>
+          <figcaption><b>Jumping spider, <span class="sci">Phidippus</span> sp.</b> Jumping spiders hunt by sight; their two large front eyes give them some of the sharpest vision of any animal their size.</figcaption>
+        </figure>
+      </div>
+      <div class="grid-2" style="margin-top:16px">
+        <figure>
           <img class="tall" src="media/field/field4.jpg" alt="A pale green spiny flower mantis nymph standing on a fingertip." loading="lazy">
-          <figcaption><b>Spiny flower mantis nymph, <span class="sci">Pseudocreobotra</span> sp.</b> The spines on the abdomen are part of a flower disguise. The eyespots it is named for appear on the wings only at the final molt.</figcaption>
+          <figcaption><b>Spiny flower mantis nymph, <span class="sci">Pseudocreobotra</span> sp.</b> The spines on the abdomen are part of a flower disguise.</figcaption>
+        </figure>
+        <figure>
+          <img class="tall" src="media/home/mantis-adult.jpg" alt="An adult spiny flower mantis on the back of a hand, with large eyespots on its folded wings." loading="lazy">
+          <figcaption><b>The same species as an adult.</b> The eyespots on the forewings appear only after the final molt. Flashed open, they startle predators.</figcaption>
         </figure>
       </div>
     </div>
@@ -617,7 +683,7 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
     </div>
     <div>
       <h2>Drawn from Life</h2>
-      <p>Drawing is how I look at an animal long enough to actually see it. A photo records a nestling in a fraction of a second; painting it means working out how the feathers clump, where the beak folds at the corner of the mouth, and how the body sits in the nest.</p>
+      <p>Drawing is how I look at an animal long enough to actually see it. When hummingbirds nested in our fig tree, a photo caught the nestlings in a fraction of a second; painting them meant working out how the feathers clump, where the beak folds at the corner of the mouth, and how the body sits in the nest.</p>
     </div>
   </div>
 
@@ -634,12 +700,26 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
     <div>
       <div class="grid-2">
         <figure>
-          <img class="tall" src="media/art/drawing1.jpg" alt="Watercolor of two hummingbird nestlings in a small cup nest on a branch, beaks pointed up and open." loading="lazy">
-          <figcaption><b>Hummingbird nestlings, watercolor.</b> Two chicks in a cup of plant down and spider silk, beaks up and open.</figcaption>
+          <img class="tall" src="media/art/hummingbird-photo.jpg" alt="Photo of two hummingbird nestlings in a cup nest on a fig branch, beaks pointed up and open." loading="lazy">
+          <figcaption><b>Observed.</b> Hummingbird nestlings in the fig tree, spring 2024.</figcaption>
         </figure>
+        <figure>
+          <img class="tall" src="media/art/drawing1.jpg" alt="Watercolor of the same two hummingbird nestlings in their nest on a branch." loading="lazy">
+          <figcaption><b>Drawn.</b> Watercolor, from that photo: a cup of plant down and spider silk, beaks up and open.</figcaption>
+        </figure>
+      </div>
+      <div class="grid-3" style="margin-top:22px">
         <figure>
           <img class="tall" src="media/art/drawing2.jpg" alt="Painting of a small white bird inside a corked glass bottle tossed in a breaking turquoise wave." loading="lazy">
           <figcaption><b>Bird in a bottle, <span class="todo">[medium]</span>.</b> An imagined scene, and the one piece here not drawn from life.</figcaption>
+        </figure>
+        <figure>
+          <img class="tall" src="media/art/cat-studies.jpg" alt="Digital drawings of three cats in different poses and coat colors, numbered 1 to 3." loading="lazy" style="object-fit:contain;background:#fff">
+          <figcaption><b>Cat studies, digital.</b> Three cats, three postures and coats.</figcaption>
+        </figure>
+        <figure>
+          <img class="tall" src="media/art/wolf.jpg" alt="Digital drawing of a grey wolf mid-stride against a pale purple circle." loading="lazy">
+          <figcaption><b>Wolf, digital.</b> Character design, built on real canine proportions.</figcaption>
         </figure>
       </div>
     </div>
@@ -699,6 +779,16 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
         <figure>
           <img class="tall" src="media/people/people3.jpg" alt="Two volunteers in AAH hoodies at a table with two white rabbits resting on woven mats, one with a name tag." loading="lazy">
           <figcaption><b>Rabbit station.</b> Each animal gets its own mat and a name tag, so visitors meet them as individuals.</figcaption>
+        </figure>
+      </div>
+      <div class="grid-2" style="margin-top:22px">
+        <figure>
+          <video class="tall" src="media/people/shelter-dog.mp4" poster="media/people/shelter-dog.jpg" autoplay muted loop playsinline aria-label="Yawen kneeling on artificial turf with a black dog, then giving a hand signal."></video>
+          <figcaption><b><span class="todo">[SVACA?]</span> Shelter dog.</b> Practicing a hand-signal sit in the play yard.</figcaption>
+        </figure>
+        <figure>
+          <img class="tall" src="media/people/zoo.jpg" alt="Yawen sitting in a car wearing a green San Francisco Zoo jacket." loading="lazy">
+          <figcaption><b>San Francisco Zoo volunteer.</b> <span class="todo">[Role, years, hours]</span></figcaption>
         </figure>
       </div>
     </div>
