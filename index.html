@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Yawen Guo — Field Notes</title>
-<meta name="description" content="Field observations, husbandry records and drawings. Yawen Guo, Archbishop Mitty High School, Class of 2027.">
+<meta name="description" content="Field observations, animal care and drawings. Yawen Guo, Archbishop Mitty High School, Class of 2027.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -179,6 +179,15 @@ figcaption b{color:var(--ink);font-weight:600}
 .note.text-only{grid-template-columns:1fr}
 .sub{font-family:"Archivo",sans-serif;font-size:13.5px;font-weight:600;color:var(--leaf);margin:40px 0 4px}
 .sub-note{font-family:"Archivo",sans-serif;font-size:12.5px;color:var(--ink-2);margin:0 0 12px;max-width:64ch}
+.oak{display:grid;grid-template-columns:200px 1fr;gap:14px;margin-top:14px;align-items:stretch}
+.oak>img{width:100%;height:100%;min-height:200px;object-fit:cover;border-radius:4px}
+.win{border:1px solid var(--rule);border-radius:8px;overflow:hidden;background:#fff;display:flex;flex-direction:column;min-height:340px}
+.win-bar{display:flex;align-items:center;gap:10px;padding:7px 12px;background:var(--paper-2);border-bottom:1px solid var(--rule);font-family:"Archivo",sans-serif;font-size:12px;color:var(--ink-2)}
+.win-bar i{width:9px;height:9px;border-radius:50%;background:rgba(46,58,52,.18);display:inline-block}
+.win-bar span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.win-bar a{color:var(--leaf);font-weight:600;text-decoration:none;white-space:nowrap}
+.win iframe{flex:1;width:100%;border:0;min-height:300px}
+@media(max-width:520px){.oak{grid-template-columns:1fr}.oak>img{max-height:260px}}
 .chars{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
 main .chars figure img{aspect-ratio:3/4;object-fit:contain;background:#fff;border:1px solid var(--rule)}
 @media(max-width:860px){.chars{grid-template-columns:repeat(3,1fr)}}
@@ -277,7 +286,7 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
       <a href="#field">In the Field</a>
       <a href="#home">At Home</a>
       <a href="#paper">Drawn from Life</a>
-      <a href="#people">With People</a>
+      <a href="#people">In the Community</a>
     </div>
   </div>
 </nav>
@@ -285,7 +294,7 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
 <header class="hero" id="top">
   <div class="hero-copy">
     <div class="hero-text">
-      <h1>I can sit on one log for four hours without moving. <em>Most of what I know about animals started there.</em></h1>
+      <h1>I can sit on a log for hours without moving. <em>Most of what I know about animals started with just observing.</em></h1>
       <div class="id-block">
         <p class="id-name">Yawen Guo</p>
         <p class="id-school">Archbishop Mitty High School &nbsp;·&nbsp; San Jose, California &nbsp;·&nbsp; Class of 2027</p>
@@ -437,36 +446,34 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
     </div>
     <div>
       <h2>Who this is</h2>
-      <p>I’m a junior at Archbishop Mitty in San Jose. Most of my time outside school goes to animals: finding them in the field, keeping them at home, drawing them, and bringing them to people.</p>
+      <p>I’m a senior at Archbishop Mitty in San Jose. Most of my time outside school goes to animals: finding them in the field, keeping them at home, drawing them, and bringing them to my community.</p>
     </div>
   </div>
 
   <div class="body-grid">
     <div class="side">
       <dl>
-        <dt>Kept at home</dt>
-        <dd>Ball python <span class="sci">Python regius</span></dd>
-        <dd>Texas rat snake <span class="sci">Pantherophis obsoletus</span></dd>
-        <dd>Leopard gecko <span class="sci">Eublepharis macularius</span></dd>
-        <dd>Alligator lizard <span class="sci">Elgaria</span> sp.</dd>
-        <dd>Spiny flower mantis <span class="sci">Pseudocreobotra</span> sp.</dd>
-        <dd>Regal jumping spider <span class="sci">Phidippus regius</span></dd>
-        <dd>Vampire crab <span class="sci">Geosesarma</span> sp.</dd>
-        <dd>Two cats, Yogurt and Lemon</dd>
-        <dt>Field hours logged</dt>
-        <dd><span class="todo">[~XXX hours]</span></dd>
-        <dt>Organizations</dt>
+        <dt>Animals I’ve Cared For</dt>
+        <dd>Ball python — <span class="sci">Python regius</span></dd>
+        <dd>Texas rat snake — <span class="sci">Pantherophis obsoletus</span></dd>
+        <dd>Leopard gecko — <span class="sci">Eublepharis macularius</span></dd>
+        <dd>Alligator lizard — <span class="sci">Elgaria</span> sp.</dd>
+        <dd>Spiny flower mantis — <span class="sci">Pseudocreobotra</span> sp.</dd>
+        <dd>Regal jumping spider — <span class="sci">Phidippus regius</span></dd>
+        <dd>Vampire crab — <span class="sci">Geosesarma</span> sp.</dd>
+        <dd>Cats — Yogurt and Lemon</dd>
+        <dt>Experience &amp; Involvement</dt>
         <dd>Animal Assisted Happiness</dd>
-        <dd>SVACA animal shelter</dd>
-        <dd>Scripps Institution of Oceanography</dd>
+        <dd>SVACA Animal Shelter</dd>
+        <dd>UCSD Scripps Institution of Oceanography</dd>
         <dd>San Francisco Zoo</dd>
-        <dt>Intended study</dt>
-        <dd>Zoology</dd><dd>Animal behavior</dd><dd>Wildlife ecology</dd><dd>Marine biology</dd>
+        <dt>Academic Interests</dt>
+        <dd>Zoology</dd><dd>Animal Behavior</dd><dd>Wildlife Ecology</dd><dd>Marine Biology</dd>
       </dl>
     </div>
     <div class="prose">
       <p>The log in the headline is real. Most of what lives in a California creek or oak woodland spends the day under something — a log, a strip of bark, a rock — and you only meet it if you are slow and patient enough to look, and careful enough to put everything back.</p>
-      <p>At home I keep reptiles and invertebrates, and I keep records on them, because watching the same animal every day tells you things a single encounter never will. I draw what I watch. And at Animal Assisted Happiness I help bring calm animals to kids who need a calm moment.</p>
+      <p>At home I care for reptiles, invertebrates and aquatic animals, and I watch them closely, because watching the same animal every day tells you things a single encounter never will. I draw what I watch. And at Animal Assisted Happiness I help bring calm animals to kids who need a calm moment.</p>
       <p>This site collects all four, in that order.</p>
       <figure>
         <img class="wide" src="media/field/field5.jpg" alt="Yawen crouching on a sandy tidal flat beside two buckets, smiling, holding up a hand line with a small crab on the end." loading="lazy" style="aspect-ratio:4/3;object-position:50% 82%">
@@ -493,8 +500,11 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
     <div class="sec-meta">
       <b>In the Field</b>
       Creeks, oak woodland, coast<br>
-      Almaden Quicksilver County Park and other Bay Area sites<br>
-      <span class="todo">[20XX–present]</span>
+      Almaden Quicksilver County Park<br>
+      Upper Stevens Creek County Park<br>
+      Monte Bello Open Space Preserve<br>
+      Sanborn County Park<br>
+      Field observations documented since 2020
     </div>
     <div>
       <h2>In the Field</h2>
@@ -508,9 +518,7 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
         <dt>Methods</dt>
         <dd>Cover-object searches</dd>
         <dd>Shoreline &amp; tidepool observation</dd>
-        <dd>Photo records to iNaturalist</dd>
-        <dt>Species recorded</dt>
-        <dd><span class="todo">[N] species on iNaturalist</span></dd>
+        <dd>Wildlife photography and field documentation</dd>
       </dl>
     </div>
     <div>
@@ -530,6 +538,10 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
       </div>
       <div class="grid-3" style="margin-top:16px">
         <figure>
+          <img class="tall" src="media/field/newt.jpg" alt="A newt with a dark brown back and bright orange underside resting on a blue-gloved hand." loading="lazy">
+          <figcaption><b>Newt, <span class="sci">Taricha</span> sp.</b> The orange underside is a warning: newt skin carries tetrodotoxin, one more reason the gloves stay on.</figcaption>
+        </figure>
+        <figure>
           <img class="tall" src="media/field/banana-slug.jpg" alt="A pale olive banana slug with dark spots on wet rock, eyestalks raised." loading="lazy">
           <figcaption><b>Banana slug, <span class="sci">Ariolimax</span> sp. Almaden Quicksilver County Park.</b> The slime is how it moves and how it finds others: banana slugs follow each other’s mucus trails.</figcaption>
         </figure>
@@ -537,22 +549,28 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
           <img class="tall" src="media/field/tent-caterpillar.jpg" alt="A hairy caterpillar with a blue back and orange tufts crawling through low green plants and leaf litter." loading="lazy">
           <figcaption><b>Western tent caterpillar, <span class="sci">Malacosoma californicum</span>. April 2020.</b> These caterpillars live in groups and build silk tents on oaks and other trees.</figcaption>
         </figure>
-        <figure>
-          <img class="tall" src="media/field/redwood-creek.jpg" alt="A shaded redwood canyon with a rocky creek bed and ferns along the banks." loading="lazy">
-          <figcaption><b>Habitat.</b> A redwood creek canyon: cool, shaded, and damp enough under the logs for lungless salamanders.</figcaption>
-        </figure>
       </div>
+      <figure style="margin-top:16px">
+        <img class="wide" src="media/field/redwood-creek.jpg" alt="A shaded redwood canyon with a rocky creek bed and ferns along the banks." loading="lazy" style="object-position:50% 72%">
+        <figcaption><b>Habitat.</b> A redwood creek canyon: cool, shaded, and damp enough under the logs for lungless salamanders.</figcaption>
+      </figure>
 
       <figure style="margin-top:16px">
         <video class="wide" src="media/field/bald-eagle.mp4" poster="media/field/bald-eagle.jpg" autoplay muted loop playsinline aria-label="A bald eagle swoops low over open water, strikes the surface with its feet and lifts off."></video>
         <figcaption><b>Bald eagle, <span class="sci">Haliaeetus leucocephalus</span>. Alaska.</b> It swoops low and strikes the water feet-first. The white head and tail separate an adult bald eagle from a golden eagle, which rarely hunts over water.</figcaption>
       </figure>
 
-      <div class="note">
-        <img src="media/field/rash.jpg" alt="The back of a hand and wrist with a line of red, raised blisters." loading="lazy" style="aspect-ratio:1;object-fit:cover;border-radius:4px">
+      <div class="note text-only">
         <div>
-          <h3>Field note — poison oak, <span class="todo">[date]</span></h3>
-          <p>Poison oak (<span class="sci">Toxicodendron diversilobum</span>) grows in exactly the shaded oak woodland where the salamanders live, and this is what it did to the back of my hand. Avoiding it is now part of the method: long sleeves over the glove cuffs, and gloves peeled off inside-out at the end of a search.</p>
+          <h3>Field note — poison oak</h3>
+          <p>Poison oak (<span class="sci">Toxicodendron diversilobum</span>) grows in exactly the shaded oak woodland where the salamanders live, and this is what it did to the back of my hand. Learning to recognize it, leaves in threes, red in fall and bare stems in winter, is now part of fieldwork.</p>
+          <div class="oak">
+            <img src="media/field/rash.jpg" alt="The back of a hand and wrist with a line of red, raised blisters." loading="lazy">
+            <div class="win">
+              <div class="win-bar"><i></i><i></i><i></i><span>openspace.org · Poison Oak</span><a href="https://www.openspace.org/where-to-go/nature/poison-oak" target="_blank" rel="noopener">Open ↗</a></div>
+              <iframe src="https://www.openspace.org/where-to-go/nature/poison-oak" title="Poison Oak — Midpeninsula Regional Open Space District" loading="lazy" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -582,42 +600,35 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
 </g></svg>
     <div class="sec-meta">
       <b>At Home</b>
-      Reptiles &amp; invertebrates<br>
-      <span class="todo">[N]</span> animals, 7 species<br>
-      Mantids since 2021
+      Reptiles, Invertebrates &amp; Aquatic Animals<br>
+      Cared for 10+ different species<br>
+      Designed and maintained naturalistic habitats and enclosures
     </div>
     <div>
       <h2>At Home</h2>
-      <p>Home is where I can watch the same animal every day. I keep a log for each one — feeding, weight, sheds, enclosure temperatures — because one observation is a story, and a year of them is data.</p>
+      <p>Home is where I can watch the same animal every day: how it responds to food, when it molts or sheds, how it grows, and what changes from one season to the next. One sighting is a story; months of watching the same animal is where the patterns show up.</p>
     </div>
   </div>
 
   <div class="body-grid">
     <div class="side">
       <dl>
-        <dt>Python enclosure</dt>
-        <dd>Warm side <span class="todo">[XX °F]</span></dd>
-        <dd>Cool side <span class="todo">[XX °F]</span></dd>
-        <dd>Humidity <span class="todo">[XX–XX %]</span></dd>
-        <dt>Records kept since</dt>
-        <dd><span class="todo">[Month 20XX]</span></dd>
-        <dt>Diet</dt>
-        <dd>Frozen-thawed rodents, every <span class="todo">[X]</span> days</dd>
+        <dt>Animal Care</dt>
+        <dd>Feeding and nutrition</dd>
+        <dd>Enclosure maintenance and habitat management</dd>
+        <dd>Animal behavior observation</dd>
+        <dt>What I Observe</dt>
+        <dd>Feeding responses</dd>
+        <dd>Molting and shedding</dd>
+        <dd>Growth and development</dd>
+        <dd>Behavioral changes</dd>
+        <dt>Ball Python Care</dt>
+        <dd>Temperature and humidity monitoring</dd>
+        <dd>Feeding and enclosure maintenance</dd>
+        <dd>Monitoring changes in appetite and feeding behavior</dd>
       </dl>
     </div>
     <div>
-      <table>
-        <tr><th>Individual</th><th>Species</th><th>Since</th><th>What the records show</th></tr>
-        <tr><td><span class="todo">[Name]</span></td><td class="sci">Python regius</td><td><span class="todo">[20XX]</span></td><td>Winter fast: refused food for <span class="todo">[X]</span> weeks, weight dropped <span class="todo">[X] g</span>, resumed on its own in <span class="todo">[month]</span>.</td></tr>
-        <tr><td><span class="todo">[Name]</span></td><td class="sci">Pantherophis obsoletus</td><td><span class="todo">[20XX]</span></td><td>Frozen-thawed pinkies from tongs every <span class="todo">[X]</span> days; shed interval <span class="todo">[X]</span> days.</td></tr>
-        <tr><td><span class="todo">[Name]</span></td><td class="sci">Eublepharis macularius</td><td><span class="todo">[20XX]</span></td><td>Shed interval went from <span class="todo">[X]</span> to <span class="todo">[Y]</span> days after <span class="todo">[change]</span>.</td></tr>
-        <tr><td><span class="todo">[Name]</span></td><td class="sci">Elgaria sp.</td><td><span class="todo">[20XX]</span></td><td>Live insects from tongs, <span class="todo">[X]</span> per feeding; shed <span class="todo">[date]</span> came off nearly whole.</td></tr>
-        <tr><td><span class="todo">[Name]</span></td><td class="sci">Pseudocreobotra sp.</td><td><span class="todo">[20XX]</span></td><td>Raised from nymph to adult; molt dates logged by instar: <span class="todo">[L3 → L4 in X days …]</span></td></tr>
-        <tr><td><span class="todo">[Name]</span></td><td class="sci">Phidippus regius</td><td><span class="todo">[20XX]</span></td><td><span class="todo">[What the log shows]</span></td></tr>
-        <tr><td><span class="todo">[Name]</span></td><td class="sci">Geosesarma sp.</td><td><span class="todo">[20XX]</span></td><td><span class="todo">[What the log shows]</span></td></tr>
-      </table>
-      <p style="font-family:'Archivo',sans-serif;font-size:12.5px;color:var(--ink-2);margin:10px 0 30px">Ball pythons often stop eating for weeks in winter. The weight log is how I tell a normal seasonal fast from a sick snake.</p>
-
       <div class="grid-2">
         <figure>
           <video class="tall" src="media/home/ball-python.mp4" poster="media/home/ball-python.jpg" autoplay muted loop playsinline aria-label="A yellow ball python wrapping around Yawen's hand and wrist, tongue-flicking."></video>
@@ -645,7 +656,7 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
       <div class="grid-3" style="margin-top:16px">
         <figure>
           <video class="tall" src="media/home/lizard-feeding.mp4" poster="media/home/lizard-feeding.jpg" autoplay muted loop playsinline aria-label="Tongs offering food to an alligator lizard in its enclosure."></video>
-          <figcaption><b>Tong feeding.</b> Feeding from tongs lets me log exactly what was eaten, and keeps the lizard from swallowing substrate.</figcaption>
+          <figcaption><b>Tong feeding.</b> Feeding from tongs lets me see exactly what was eaten, and keeps the lizard from swallowing substrate.</figcaption>
         </figure>
         <figure>
           <img class="tall" src="media/home/lizard-shed.jpg" alt="A shed lizard skin, nearly whole, laid out on white paper." loading="lazy">
@@ -659,11 +670,21 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
       <div class="grid-2" style="margin-top:16px">
         <figure>
           <img class="tall" src="media/home/snake-enclosure.jpg" alt="A glass terrarium with layered substrate, driftwood, a coconut hide and live plants." loading="lazy">
-          <figcaption><b>A little ecosystem I built for my snake.</b> Drainage layer, substrate, driftwood, a coconut hide and live plants.</figcaption>
+          <figcaption><b>A little ecosystem I built for my juvenile rat snake.</b> Drainage layer, substrate, driftwood, a coconut hide and live plants.</figcaption>
         </figure>
         <figure>
           <video class="tall" src="media/home/vampire-crab.mp4" poster="media/home/vampire-crab.jpg" autoplay muted loop playsinline aria-label="A purple and red vampire crab eating on wet substrate in a small tank."></video>
           <figcaption><b>Vampire crab, <span class="sci">Geosesarma</span> sp.</b> A semi-terrestrial crab: it needs both land and shallow water in one enclosure. Here, eating.</figcaption>
+        </figure>
+      </div>
+      <div class="grid-2" style="margin-top:16px">
+        <figure>
+          <video class="tall" src="media/home/rat-snake-feeding.mp4" poster="media/home/rat-snake-feeding.jpg" autoplay muted loop playsinline aria-label="A young white rat snake swallowing a pinky mouse beside its water dish."></video>
+          <figcaption><b>Juvenile Texas rat snake, feeding.</b> Swallowing a pinky mouse head-first, so the legs fold back instead of catching.</figcaption>
+        </figure>
+        <figure>
+          <img class="tall" src="media/home/cats.jpg" alt="Three photos of a cream-colored cat lying on its back on blankets." loading="lazy" style="object-fit:contain;background:var(--paper-2)">
+          <figcaption><b>Our cats, Yogurt and Lemon.</b></figcaption>
         </figure>
       </div>
       <div class="grid-2" style="margin-top:16px">
@@ -701,8 +722,7 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
 </g></svg>
     <div class="sec-meta">
       <b>Drawn from Life</b>
-      Watercolor, paint &amp; digital<br>
-      Since <span class="todo">[20XX]</span>
+      Watercolor, traditional &amp; digital art
     </div>
     <div>
       <h2>Drawn from Life</h2>
@@ -713,19 +733,19 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
   <div class="body-grid">
     <div class="side">
       <dl>
-        <dt>Method</dt>
+        <dt>Methods</dt>
         <dd>From life and from my own reference photos</dd>
-        <dd>Character designs built on real animals</dd>
-        <dt>Also</dt>
-        <dd>School newspaper, art editor</dd>
-        <dd>Commissioned work</dd>
+        <dd>Character designs based on real animals</dd>
+        <dt>Other Art Activities</dt>
+        <dd>Club Activities — Art &amp; Illustration</dd>
+        <dd>Commissioned Work</dd>
       </dl>
     </div>
     <div>
       <div class="grid-2">
         <figure>
           <img class="tall" src="media/art/hummingbird-photo.jpg" alt="Photo of two hummingbird nestlings in a cup nest on a fig branch, beaks pointed up and open." loading="lazy">
-          <figcaption><b>Observed.</b> Hummingbird nestlings in the fig tree, spring 2024.</figcaption>
+          <figcaption><b>Observed.</b> Hummingbird nestlings in the fig tree, summer 2024.</figcaption>
         </figure>
         <figure>
           <img class="tall" src="media/art/drawing1.jpg" alt="Watercolor of the same two hummingbird nestlings in their nest on a branch." loading="lazy">
@@ -735,7 +755,7 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
       <div class="grid-3" style="margin-top:22px">
         <figure>
           <img class="tall" src="media/art/drawing2.jpg" alt="Painting of a small white bird inside a corked glass bottle tossed in a breaking turquoise wave." loading="lazy">
-          <figcaption><b><i>Freedom in a Bottle</i>, <span class="todo">[medium]</span>.</b> The one piece here not drawn from life: a small bird sealed in a bottle on a breaking wave, painted about wanting to be free.</figcaption>
+          <figcaption><b><i>Freedom in a Bottle</i>, acrylic on felt canvas.</b> The one piece here not drawn from life: a small bird sealed in a bottle on a breaking wave, painted about wanting to be free.</figcaption>
         </figure>
         <figure>
           <img class="tall" src="media/art/cat-studies.jpg" alt="Digital drawings of three cats in different poses and coat colors, numbered 1 to 3." loading="lazy" style="object-fit:contain;background:#fff">
@@ -750,7 +770,7 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
       <h3 class="sub">Characters built from animals</h3>
       <p class="sub-note">Digital character designs. Each one starts from a real animal, and the anatomy has to stay readable even when the style is not realistic.</p>
       <div class="chars">
-        <figure><img src="media/art/char-gecko.jpg" alt="Character design with a long, spotted, banded leopard gecko tail." loading="lazy"><figcaption><b>Leopard gecko</b> tail</figcaption></figure>
+        <figure><img src="media/art/char-gecko.jpg" alt="Character design with a long, spotted, banded corn snake tail." loading="lazy"><figcaption><b>Corn snake</b> tail</figcaption></figure>
         <figure><img src="media/art/char-mantis.jpg" alt="Character design with long antennae and large veined insect wings." loading="lazy"><figcaption><b>Mantis</b> wings</figcaption></figure>
         <figure><img src="media/art/char-rabbit.jpg" alt="Character sheet for Kael Vane, a cottontail rabbit character, with color palette." loading="lazy"><figcaption><b>Cottontail rabbit</b></figcaption></figure>
         <figure><img src="media/art/char-lynx.jpg" alt="Character design wearing a hat with tufted lynx ears." loading="lazy"><figcaption><b>Lynx</b> ear tufts</figcaption></figure>
@@ -762,7 +782,7 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
 <div class="trail" aria-hidden="true"><svg viewBox="0 0 1000 40" preserveAspectRatio="xMidYMid meet"><g fill="#CBD6CB" stroke="#CBD6CB" stroke-width="2" stroke-linecap="round"><g transform="translate(30 30)"><circle r="3"/><path d="M0 0 L4.1 -8.0"/><path d="M0 0 L7.7 -4.7"/><path d="M0 0 L9.0 0.0"/><path d="M0 0 L7.7 4.7"/><path d="M0 0 L4.9 7.6"/></g><g transform="translate(82 10)"><circle r="3"/><path d="M0 0 L4.1 8.0"/><path d="M0 0 L7.7 4.7"/><path d="M0 0 L9.0 -0.0"/><path d="M0 0 L7.7 -4.7"/><path d="M0 0 L4.9 -7.6"/></g><g transform="translate(134 30)"><circle r="3"/><path d="M0 0 L4.1 -8.0"/><path d="M0 0 L7.7 -4.7"/><path d="M0 0 L9.0 0.0"/><path d="M0 0 L7.7 4.7"/><path d="M0 0 L4.9 7.6"/></g><g transform="translate(186 10)"><circle r="3"/><path d="M0 0 L4.1 8.0"/><path d="M0 0 L7.7 4.7"/><path d="M0 0 L9.0 -0.0"/><path d="M0 0 L7.7 -4.7"/><path d="M0 0 L4.9 -7.6"/></g><g transform="translate(238 30)"><circle r="3"/><path d="M0 0 L4.1 -8.0"/><path d="M0 0 L7.7 -4.7"/><path d="M0 0 L9.0 0.0"/><path d="M0 0 L7.7 4.7"/><path d="M0 0 L4.9 7.6"/></g><g transform="translate(290 10)"><circle r="3"/><path d="M0 0 L4.1 8.0"/><path d="M0 0 L7.7 4.7"/><path d="M0 0 L9.0 -0.0"/><path d="M0 0 L7.7 -4.7"/><path d="M0 0 L4.9 -7.6"/></g><g transform="translate(342 30)"><circle r="3"/><path d="M0 0 L4.1 -8.0"/><path d="M0 0 L7.7 -4.7"/><path d="M0 0 L9.0 0.0"/><path d="M0 0 L7.7 4.7"/><path d="M0 0 L4.9 7.6"/></g><g transform="translate(394 10)"><circle r="3"/><path d="M0 0 L4.1 8.0"/><path d="M0 0 L7.7 4.7"/><path d="M0 0 L9.0 -0.0"/><path d="M0 0 L7.7 -4.7"/><path d="M0 0 L4.9 -7.6"/></g><g transform="translate(446 30)"><circle r="3"/><path d="M0 0 L4.1 -8.0"/><path d="M0 0 L7.7 -4.7"/><path d="M0 0 L9.0 0.0"/><path d="M0 0 L7.7 4.7"/><path d="M0 0 L4.9 7.6"/></g><g transform="translate(498 10)"><circle r="3"/><path d="M0 0 L4.1 8.0"/><path d="M0 0 L7.7 4.7"/><path d="M0 0 L9.0 -0.0"/><path d="M0 0 L7.7 -4.7"/><path d="M0 0 L4.9 -7.6"/></g><g transform="translate(550 30)"><circle r="3"/><path d="M0 0 L4.1 -8.0"/><path d="M0 0 L7.7 -4.7"/><path d="M0 0 L9.0 0.0"/><path d="M0 0 L7.7 4.7"/><path d="M0 0 L4.9 7.6"/></g><g transform="translate(602 10)"><circle r="3"/><path d="M0 0 L4.1 8.0"/><path d="M0 0 L7.7 4.7"/><path d="M0 0 L9.0 -0.0"/><path d="M0 0 L7.7 -4.7"/><path d="M0 0 L4.9 -7.6"/></g><g transform="translate(654 30)"><circle r="3"/><path d="M0 0 L4.1 -8.0"/><path d="M0 0 L7.7 -4.7"/><path d="M0 0 L9.0 0.0"/><path d="M0 0 L7.7 4.7"/><path d="M0 0 L4.9 7.6"/></g><g transform="translate(706 10)"><circle r="3"/><path d="M0 0 L4.1 8.0"/><path d="M0 0 L7.7 4.7"/><path d="M0 0 L9.0 -0.0"/><path d="M0 0 L7.7 -4.7"/><path d="M0 0 L4.9 -7.6"/></g><g transform="translate(758 30)"><circle r="3"/><path d="M0 0 L4.1 -8.0"/><path d="M0 0 L7.7 -4.7"/><path d="M0 0 L9.0 0.0"/><path d="M0 0 L7.7 4.7"/><path d="M0 0 L4.9 7.6"/></g><g transform="translate(810 10)"><circle r="3"/><path d="M0 0 L4.1 8.0"/><path d="M0 0 L7.7 4.7"/><path d="M0 0 L9.0 -0.0"/><path d="M0 0 L7.7 -4.7"/><path d="M0 0 L4.9 -7.6"/></g><g transform="translate(862 30)"><circle r="3"/><path d="M0 0 L4.1 -8.0"/><path d="M0 0 L7.7 -4.7"/><path d="M0 0 L9.0 0.0"/><path d="M0 0 L7.7 4.7"/><path d="M0 0 L4.9 7.6"/></g><g transform="translate(914 10)"><circle r="3"/><path d="M0 0 L4.1 8.0"/><path d="M0 0 L7.7 4.7"/><path d="M0 0 L9.0 -0.0"/><path d="M0 0 L7.7 -4.7"/><path d="M0 0 L4.9 -7.6"/></g><g transform="translate(966 30)"><circle r="3"/><path d="M0 0 L4.1 -8.0"/><path d="M0 0 L7.7 -4.7"/><path d="M0 0 L9.0 0.0"/><path d="M0 0 L7.7 4.7"/><path d="M0 0 L4.9 7.6"/></g><path d="M20 20 C140 16 260 24 380 20 C500 16 620 24 740 20 C820 17 900 22 980 20" fill="none" stroke-width="1.6" stroke-dasharray="2 8"/></g></svg></div>
 </section>
 
-<!-- =========================================================== WITH PEOPLE -->
+<!-- ===================================================== IN THE COMMUNITY -->
 <section id="people">
   <div class="sec-head">
     <svg class="mascot" viewBox="0 0 120 90" aria-hidden="true" focusable="false"><g class="bunny">
@@ -778,13 +798,13 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
 <ellipse class="o" fill="#F4EFE7" cx="44" cy="87" rx="10" ry="5.5"/><ellipse class="o" fill="#F4EFE7" cx="76" cy="87" rx="10" ry="5.5"/>
 </g></svg>
     <div class="sec-meta">
-      <b>With People</b>
+      <b>In the Community</b>
       Animal Assisted Happiness<br>
-      Sunnyvale, California<br>
-      <span class="todo">[20XX–present · XXX hours]</span>
+      SVACA Animal Shelter<br>
+      San Francisco Zoo
     </div>
     <div>
-      <h2>With People</h2>
+      <h2>In the Community</h2>
       <p>Animal Assisted Happiness brings farm animals to children and families facing illness, disability and hard times, at its farm and at schools and community events. Most of my job is reading the animal: knowing which rabbit or guinea pig will sit calmly in a stranger’s lap today, and which one needs to go back to its pen.</p>
     </div>
   </div>
@@ -792,16 +812,19 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
   <div class="body-grid">
     <div class="side">
       <dl>
+        <dt>Animal Assisted Happiness (AAH)</dt>
+        <dd>Sunnyvale, California</dd>
+        <dd>2023–present</dd>
         <dt>Roles</dt>
         <dd>Youth Ambassador</dd>
-        <dd>Volunteer trainer</dd>
-        <dd>Tour lead</dd>
+        <dd>Volunteer Training Committee Co-Liaison</dd>
         <dt>Settings</dt>
         <dd>The farm in Sunnyvale</dd>
         <dd>School and community events</dd>
       </dl>
     </div>
     <div>
+      <h3 class="sub" style="margin-top:0">Animal Assisted Happiness</h3>
       <figure>
         <img class="wide" src="media/people/people1.jpg" alt="Yawen sitting on a bench at the AAH farm with a guinea pig in a fleece bed on her lap while three young children look on." loading="lazy" style="object-position:50% 60%">
         <figcaption><b>At the AAH farm.</b> Introducing a guinea pig to young visitors: one hand under, one resting over the back, so it feels secure enough to stay still.</figcaption>
@@ -816,14 +839,20 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
           <figcaption><b>Rabbit station.</b> Each animal gets its own mat and a name tag, so visitors meet them as individuals.</figcaption>
         </figure>
       </div>
-      <div class="grid-2" style="margin-top:22px">
+      <h3 class="sub">SVACA Animal Shelter</h3>
+      <p class="sub-note">Engaged with community members to promote SVACA’s programs, services, and animal adoption opportunities.</p>
+      <div class="grid-2">
         <figure>
           <video class="tall" src="media/people/shelter-dog.mp4" poster="media/people/shelter-dog.jpg" autoplay muted loop playsinline aria-label="Yawen kneeling on artificial turf with a black dog, then giving a hand signal."></video>
-          <figcaption><b>Training a dog, <span class="todo">[where?]</span>.</b> Practicing a hand-signal sit in the play yard.</figcaption>
+          <figcaption><b>Training a dog.</b> Practicing a hand-signal sit in the play yard.</figcaption>
         </figure>
+      </div>
+
+      <h3 class="sub">San Francisco Zoo</h3>
+      <div class="grid-2">
         <figure>
           <img class="tall" src="media/people/zoo.jpg" alt="Yawen sitting in a car wearing a green San Francisco Zoo jacket." loading="lazy">
-          <figcaption><b>San Francisco Zoo volunteer.</b> <span class="todo">[Role, years, hours]</span></figcaption>
+          <figcaption><b>San Francisco Zoo.</b></figcaption>
         </figure>
       </div>
     </div>
@@ -831,7 +860,7 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
 </section>
 
 <footer>
-  <div><span class="todo">[email]</span> · <a href="#">iNaturalist</a> <span class="todo">[profile link]</span></div>
+  <div>Yawen Guo · San Jose, California</div>
   <svg class="sleepy" viewBox="0 0 130 70" aria-hidden="true" focusable="false">
 <path class="o" fill="#F7DCC4" d="M20 64 C8 50 22 30 52 30 C86 30 112 40 112 56 C112 64 104 66 96 66 L28 66 Z"/>
 <path fill="none" style="stroke:#2E3A34;stroke-width:9;stroke-linecap:round" d="M100 60 C118 58 120 44 108 40"/><path fill="none" style="stroke:#F7DCC4;stroke-width:4.4;stroke-linecap:round" d="M100 60 C118 58 120 44 108 40"/>
