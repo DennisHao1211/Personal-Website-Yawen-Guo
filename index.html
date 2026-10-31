@@ -137,6 +137,7 @@ section{scroll-margin-top:66px;padding:74px 0 8px}
 .sec-head p{margin:0;max-width:58ch;color:#33463C}
 
 .body-grid{display:grid;grid-template-columns:var(--marg) 1fr;gap:40px}
+.body-grid>*{min-width:0}
 .side{font-family:"Archivo",sans-serif;font-size:12.5px;color:var(--ink-2);line-height:1.7}
 .side dl{margin:0}
 .side dt{color:var(--ink);font-weight:600;margin-top:14px}
@@ -177,6 +178,7 @@ figcaption b{color:var(--ink);font-weight:600}
 }
 .note .slot{aspect-ratio:1;margin:0}
 .note.text-only{grid-template-columns:1fr}
+.note>*{min-width:0}
 .sub{font-family:"Archivo",sans-serif;font-size:13.5px;font-weight:600;color:var(--leaf);margin:40px 0 4px}
 .sub-note{font-family:"Archivo",sans-serif;font-size:12.5px;color:var(--ink-2);margin:0 0 12px;max-width:64ch}
 .oak{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
@@ -194,8 +196,19 @@ figcaption b{color:var(--ink);font-weight:600}
 .win-body p{margin:0 0 16px;font-size:15.5px;max-width:52ch;color:#33463C}
 .win-btn{display:inline-block;font-family:"Archivo",sans-serif;font-size:13px;font-weight:600;color:#fff;background:var(--leaf);padding:8px 15px;border-radius:999px}
 .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.hb{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.hb figcaption{margin-top:4px}
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tl li{position:relative}
+.tl li::before{content:"";position:absolute;top:7px;left:0;right:-12px;height:2px;background:rgba(79,138,110,.35)}
+.tl li:last-child::before{right:0}
+.tl-when{position:relative;display:inline-flex;align-items:center;gap:8px;padding-right:8px;background:var(--paper);font-family:"Archivo",sans-serif;font-size:12px;font-weight:600;color:var(--ink);margin-bottom:10px;white-space:nowrap}
+.tl-dot{width:16px;height:16px;border-radius:50%;background:var(--leaf);border:4px solid var(--paper);box-shadow:0 0 0 1px rgba(79,138,110,.45);flex:none}
+.tl-day{font-weight:400;color:var(--ink-2)}
+.tl-ref img{outline:2px solid var(--leaf);outline-offset:3px}
+.tl-tag{display:block;margin-top:3px;color:var(--leaf);font-weight:600}
+.compare{position:relative}
+.compare::after{content:"→";position:absolute;left:50%;top:38%;transform:translate(-50%,-50%);width:36px;height:36px;border-radius:50%;background:var(--paper);border:1px solid var(--rule);display:grid;place-items:center;font-family:"Archivo",sans-serif;font-size:17px;color:var(--leaf);pointer-events:none}
+@media(max-width:860px){.tl{grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:44%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}.tl li{scroll-snap-align:start}}
+@media(max-width:520px){.tl{grid-auto-columns:70%}.compare::after{display:none}}
 @media(max-width:860px){.grid-4{grid-template-columns:repeat(2,1fr)}}
 .chars{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
 main .chars figure img{aspect-ratio:3/4;object-fit:contain;background:#fff;border:1px solid var(--rule)}
@@ -786,19 +799,39 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
       </dl>
     </div>
     <div>
-      <div class="grid-2">
-        <div>
-          <div class="hb">
-            <figure><img class="tall" src="media/art/hb-1.jpg" alt="Two small white hummingbird eggs in a cup nest." loading="lazy"><figcaption><b>1.</b> Eggs</figcaption></figure>
-            <figure><img class="tall" src="media/art/hb-2.jpg" alt="Two newly hatched hummingbird chicks with pin feathers in the nest." loading="lazy"><figcaption><b>2.</b> Hatchlings</figcaption></figure>
-            <figure><img class="tall" src="media/art/hummingbird-photo.jpg" alt="Two hummingbird nestlings in the nest, beaks pointed up and open." loading="lazy"><figcaption><b>3.</b> Nestlings</figcaption></figure>
-            <figure><img class="tall" src="media/art/hb-4.jpg" alt="Two nearly grown hummingbird fledglings filling the nest on a fig branch." loading="lazy"><figcaption><b>4.</b> Ready to fledge</figcaption></figure>
-          </div>
-          <p class="sub-note" style="margin-top:8px"><b>Observed.</b> Hummingbird nestlings in the fig tree, summer 2024: from eggs to leaving the nest.</p>
-        </div>
+      <h3 class="sub" style="margin-top:0">From egg to fledgling</h3>
+      <p class="sub-note">Hummingbird nestlings in the fig tree, summer 2024: four photos of the same nest, 36 days from the first to the last.</p>
+      <ol class="tl">
+        <li><figure>
+          <div class="tl-when"><span class="tl-dot"></span>May 27, 2024</div>
+          <img class="tall" src="media/art/hb-1.jpg" alt="Two small white hummingbird eggs in a cup nest lined with plant down." loading="lazy">
+          <figcaption><b>Eggs.</b> Incubation stage.</figcaption>
+        </figure></li>
+        <li><figure>
+          <div class="tl-when"><span class="tl-dot"></span>June 10 <span class="tl-day">· day 14</span></div>
+          <img class="tall" src="media/art/hb-2.jpg" alt="Two young hummingbird nestlings with dark skin and sparse pin feathers in the nest." loading="lazy">
+          <figcaption><b>Young nestlings.</b> Early nestling stage.</figcaption>
+        </figure></li>
+        <li><figure>
+          <div class="tl-when"><span class="tl-dot"></span>June 26 <span class="tl-day">· day 30</span></div>
+          <img class="tall" src="media/art/hb-3.jpg" alt="Two feathered hummingbird nestlings filling the nest on a fig branch, bills pointing up." loading="lazy">
+          <figcaption><b>Nestlings.</b> Late nestling stage.</figcaption>
+        </figure></li>
+        <li class="tl-ref"><figure>
+          <div class="tl-when"><span class="tl-dot"></span>July 2 <span class="tl-day">· day 36</span></div>
+          <img class="tall" src="media/art/hummingbird-photo.jpg" alt="Two hummingbird nestlings nearly ready to fledge, beaks up and open." loading="lazy">
+          <figcaption><b>Nearly ready to fledge.</b> <span class="tl-tag">Painted from this photo ↓</span></figcaption>
+        </figure></li>
+      </ol>
+
+      <div class="grid-2 compare" style="margin-top:28px">
+        <figure>
+          <img class="tall" src="media/art/hummingbird-photo.jpg" alt="Photo of two hummingbird nestlings in a cup nest on a fig branch, beaks pointed up and open." loading="lazy">
+          <figcaption><b>Observed.</b> July 2, 2024, nearly ready to fledge.</figcaption>
+        </figure>
         <figure>
           <img class="tall" src="media/art/drawing1.jpg" alt="Watercolor of the same two hummingbird nestlings in their nest on a branch." loading="lazy">
-          <figcaption><b>Drawn.</b> Watercolor on paper, from that photo: two fledglings in a cup of plant down and spider silk, beaks up and open.</figcaption>
+          <figcaption><b>Drawn.</b> Watercolor on paper, from that photo: two nestlings in a cup of plant down and spider silk, beaks up and open.</figcaption>
         </figure>
       </div>
       <div class="grid-3" style="margin-top:22px">
