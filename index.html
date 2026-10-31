@@ -179,15 +179,19 @@ figcaption b{color:var(--ink);font-weight:600}
 .note.text-only{grid-template-columns:1fr}
 .sub{font-family:"Archivo",sans-serif;font-size:13.5px;font-weight:600;color:var(--leaf);margin:40px 0 4px}
 .sub-note{font-family:"Archivo",sans-serif;font-size:12.5px;color:var(--ink-2);margin:0 0 12px;max-width:64ch}
-.oak{display:grid;grid-template-columns:200px 1fr;gap:14px;margin-top:14px;align-items:stretch}
-.oak>img{width:100%;height:100%;min-height:200px;object-fit:cover;border-radius:4px}
-.win{border:1px solid var(--rule);border-radius:8px;overflow:hidden;background:#fff;display:flex;flex-direction:column;min-height:340px}
+.oak{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.oak img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:4px;display:block}
+.oak .credit{font-family:"Archivo",sans-serif;font-size:11.5px;color:var(--ink-2);margin-top:5px}
+.win{margin-top:14px;border:1px solid var(--rule);border-radius:8px;overflow:hidden;background:#fff;display:flex;flex-direction:column;min-height:340px}
 .win-bar{display:flex;align-items:center;gap:10px;padding:7px 12px;background:var(--paper-2);border-bottom:1px solid var(--rule);font-family:"Archivo",sans-serif;font-size:12px;color:var(--ink-2)}
 .win-bar i{width:9px;height:9px;border-radius:50%;background:rgba(46,58,52,.18);display:inline-block}
 .win-bar span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .win-bar a{color:var(--leaf);font-weight:600;text-decoration:none;white-space:nowrap}
 .win iframe{flex:1;width:100%;border:0;min-height:300px}
-@media(max-width:520px){.oak{grid-template-columns:1fr}.oak>img{max-height:260px}}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.hb{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.hb figcaption{margin-top:4px}
+@media(max-width:860px){.grid-4{grid-template-columns:repeat(2,1fr)}}
 .chars{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
 main .chars figure img{aspect-ratio:3/4;object-fit:contain;background:#fff;border:1px solid var(--rule)}
 @media(max-width:860px){.chars{grid-template-columns:repeat(3,1fr)}}
@@ -536,10 +540,14 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
           <figcaption><b>Alligator lizard, <span class="sci">Elgaria</span> sp.</b> Keeled scales and a skin fold along each side: the field marks that separate it from skinks and fence lizards.</figcaption>
         </figure>
       </div>
-      <div class="grid-3" style="margin-top:16px">
+      <div class="grid-4" style="margin-top:16px">
+        <figure>
+          <img class="tall" src="media/field/newt-wild.jpg" alt="A brown newt with rough skin stretched across wet leaves and moss on the forest floor." loading="lazy">
+          <figcaption><b>Newt, <span class="sci">Taricha</span> sp.</b> In the leaf litter. Newts leave cover on wet days to move across the forest floor.</figcaption>
+        </figure>
         <figure>
           <img class="tall" src="media/field/newt.jpg" alt="A newt with a dark brown back and bright orange underside resting on a blue-gloved hand." loading="lazy">
-          <figcaption><b>Newt, <span class="sci">Taricha</span> sp.</b> The orange underside is a warning: newt skin carries tetrodotoxin, one more reason the gloves stay on.</figcaption>
+          <figcaption><b>In hand.</b> The orange underside is a warning: newt skin carries tetrodotoxin, one more reason the gloves stay on.</figcaption>
         </figure>
         <figure>
           <img class="tall" src="media/field/banana-slug.jpg" alt="A pale olive banana slug with dark spots on wet rock, eyestalks raised." loading="lazy">
@@ -566,10 +574,14 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
           <p>Poison oak (<span class="sci">Toxicodendron diversilobum</span>) grows in exactly the shaded oak woodland where the salamanders live, and this is what it did to the back of my hand. Learning to recognize it, leaves in threes, red in fall and bare stems in winter, is now part of fieldwork.</p>
           <div class="oak">
             <img src="media/field/rash.jpg" alt="The back of a hand and wrist with a line of red, raised blisters." loading="lazy">
-            <div class="win">
+            <div>
+              <img src="media/field/poison-oak-leaf.jpg" alt="Poison oak: glossy green leaves in groups of three." loading="lazy">
+              <div class="credit">Poison oak. Photo: Heather Diaz, Midpeninsula Regional Open Space District.</div>
+            </div>
+          </div>
+          <div class="win">
               <div class="win-bar"><i></i><i></i><i></i><span>openspace.org · Poison Oak</span><a href="https://www.openspace.org/where-to-go/nature/poison-oak" target="_blank" rel="noopener">Open ↗</a></div>
               <iframe src="https://www.openspace.org/where-to-go/nature/poison-oak" title="Poison Oak — Midpeninsula Regional Open Space District" loading="lazy" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
-            </div>
           </div>
         </div>
       </div>
@@ -683,18 +695,40 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
           <figcaption><b>Juvenile Texas rat snake, feeding.</b> Swallowing a pinky mouse head-first, so the legs fold back instead of catching.</figcaption>
         </figure>
         <figure>
-          <img class="tall" src="media/home/cats.jpg" alt="Three photos of a cream-colored cat lying on its back on blankets." loading="lazy" style="object-fit:contain;background:var(--paper-2)">
-          <figcaption><b>Our cats, Yogurt and Lemon.</b></figcaption>
+          <video class="tall" src="media/home/shore-crab.mp4" poster="media/home/shore-crab.jpg" autoplay muted loop playsinline aria-label="A small striped shore crab tucked under a slate rock on pale gravel in a tank."></video>
+          <figcaption><b>Striped shore crab, <span class="sci">Pachygrapsus crassipes</span>.</b> A crab from California’s rocky shore. By day it wedges itself under the rock, the way it would hide in a crevice at low tide.</figcaption>
         </figure>
       </div>
-      <div class="grid-2" style="margin-top:16px">
+
+      <h3 class="sub">Growth series: spiny flower mantis</h3>
+      <p class="sub-note"><span class="sci">Pseudocreobotra</span> sp. Mantises grow by molting. The wings, and the eyespots this species is known for, appear only at the final molt.</p>
+      <div class="grid-4">
         <figure>
-          <img class="tall" src="media/field/field4.jpg" alt="A pale green spiny flower mantis nymph standing on a fingertip." loading="lazy">
-          <figcaption><b>Spiny flower mantis nymph, <span class="sci">Pseudocreobotra</span> sp.</b> The spines on the abdomen are part of a flower disguise.</figcaption>
+          <img class="tall" src="media/field/field4.jpg" alt="A tiny pale green spiny flower mantis nymph standing on a fingertip." loading="lazy">
+          <figcaption><b>1. Young nymph.</b> Small enough to stand on a fingertip.</figcaption>
         </figure>
         <figure>
-          <img class="tall" src="media/home/mantis-adult.jpg" alt="An adult spiny flower mantis on the back of a hand, with large eyespots on its folded wings." loading="lazy">
-          <figcaption><b>The same species as an adult.</b> The eyespots on the forewings appear only after the final molt. Flashed open, they startle predators.</figcaption>
+          <video class="tall" src="media/home/mantis-1.mp4" poster="media/home/mantis-1.jpg" autoplay muted loop playsinline aria-label="A mantis nymph clinging to an artificial flower inside a clear enclosure."></video>
+          <figcaption><b>2. Nymph.</b> Waiting on a flower, where its color and spines help it blend in.</figcaption>
+        </figure>
+        <figure>
+          <img class="tall" src="media/home/mantis-2.jpg" alt="A larger mantis nymph on a leaf inside a clear acrylic enclosure with a twig and rope perch." loading="lazy">
+          <figcaption><b>3. Late nymph.</b> In its enclosure, with branches to climb and hang from when it molts.</figcaption>
+        </figure>
+        <figure>
+          <video class="tall" src="media/home/mantis-3.mp4" poster="media/home/mantis-3.jpg" autoplay muted loop playsinline aria-label="An adult spiny flower mantis with full wings walking across a hand."></video>
+          <figcaption><b>4. Adult.</b> After the final molt: full wings with eyespots.</figcaption>
+        </figure>
+      </div>
+
+      <div class="grid-2" style="margin-top:22px">
+        <figure>
+          <img class="tall" src="media/home/cats-tree.jpg" alt="Two cats, a calico and a cream tabby, each sitting in a cubby of a cat tree." loading="lazy">
+          <figcaption><b>Our cats, Yogurt and Lemon.</b></figcaption>
+        </figure>
+        <figure>
+          <img class="tall" src="media/home/cats.jpg" alt="Three photos of a cream-colored cat lying on its back on blankets." loading="lazy" style="object-fit:contain;background:var(--paper-2)">
+          <figcaption><b>Off duty.</b></figcaption>
         </figure>
       </div>
     </div>
@@ -743,10 +777,15 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
     </div>
     <div>
       <div class="grid-2">
-        <figure>
-          <img class="tall" src="media/art/hummingbird-photo.jpg" alt="Photo of two hummingbird nestlings in a cup nest on a fig branch, beaks pointed up and open." loading="lazy">
-          <figcaption><b>Observed.</b> Hummingbird nestlings in the fig tree, summer 2024.</figcaption>
-        </figure>
+        <div>
+          <div class="hb">
+            <figure><img class="tall" src="media/art/hb-1.jpg" alt="Two small white hummingbird eggs in a cup nest." loading="lazy"><figcaption><b>1.</b> Eggs</figcaption></figure>
+            <figure><img class="tall" src="media/art/hb-2.jpg" alt="Two newly hatched hummingbird chicks with pin feathers in the nest." loading="lazy"><figcaption><b>2.</b> Hatchlings</figcaption></figure>
+            <figure><img class="tall" src="media/art/hummingbird-photo.jpg" alt="Two hummingbird nestlings in the nest, beaks pointed up and open." loading="lazy"><figcaption><b>3.</b> Nestlings</figcaption></figure>
+            <figure><img class="tall" src="media/art/hb-4.jpg" alt="Two nearly grown hummingbird fledglings filling the nest on a fig branch." loading="lazy"><figcaption><b>4.</b> Ready to fledge</figcaption></figure>
+          </div>
+          <p class="sub-note" style="margin-top:8px"><b>Observed.</b> Hummingbird nestlings in the fig tree, summer 2024: from eggs to leaving the nest.</p>
+        </div>
         <figure>
           <img class="tall" src="media/art/drawing1.jpg" alt="Watercolor of the same two hummingbird nestlings in their nest on a branch." loading="lazy">
           <figcaption><b>Drawn.</b> Watercolor on paper, from that photo: two fledglings in a cup of plant down and spider silk, beaks up and open.</figcaption>
@@ -839,9 +878,35 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
           <figcaption><b>Rabbit station.</b> Each animal gets its own mat and a name tag, so visitors meet them as individuals.</figcaption>
         </figure>
       </div>
+      <div class="grid-3" style="margin-top:22px">
+        <figure>
+          <img class="tall" src="media/people/aah-hen.jpg" alt="Yawen at a table at a park event with a hen on a round bed and young children petting a rabbit." loading="lazy">
+          <figcaption><b>Community event.</b> A hen and a rabbit, each on its own bed, so kids can meet them up close.</figcaption>
+        </figure>
+        <figure>
+          <img class="tall" src="media/people/aah-pavilion.jpg" alt="Yawen in a white cap at a stone table under a pavilion with animals on mats and children gathered around." loading="lazy" style="object-position:38% 50%">
+          <figcaption><b>Under the pavilion.</b> Kids take turns meeting the animals.</figcaption>
+        </figure>
+        <figure>
+          <img class="tall" src="media/people/aah-park.jpg" alt="Yawen standing in a park with a group of young children in purple Parks Make Life Better shirts." loading="lazy">
+          <figcaption><b>Parks Make Life Better.</b> A summer park group meets one of the farm animals.</figcaption>
+        </figure>
+      </div>
       <h3 class="sub">SVACA Animal Shelter</h3>
       <p class="sub-note">Engaged with community members to promote SVACA’s programs, services, and animal adoption opportunities.</p>
-      <div class="grid-2">
+      <figure>
+        <img class="wide" src="media/people/svaca-booth.jpg" alt="Yawen in a blue SVACA shirt standing behind an outreach table with pet crates, flyers and photos at an outdoor fair." loading="lazy" style="object-position:50% 45%">
+        <figcaption><b>SVACA outreach booth.</b> Talking with visitors about adoption, programs and services.</figcaption>
+      </figure>
+      <div class="grid-3" style="margin-top:22px">
+        <figure>
+          <img class="tall" src="media/people/svaca-outreach.jpg" alt="Yawen behind a wire crate at the SVACA booth while a visitor reaches toward the animal inside." loading="lazy">
+          <figcaption><b>Meeting an adoptable animal.</b></figcaption>
+        </figure>
+        <figure>
+          <img class="tall" src="media/people/svaca-cats.jpg" alt="Yawen leaning toward a black-and-white cat in a cat condo in a shelter room." loading="lazy">
+          <figcaption><b>Cat room.</b> Getting shelter cats comfortable with people before adoption.</figcaption>
+        </figure>
         <figure>
           <video class="tall" src="media/people/shelter-dog.mp4" poster="media/people/shelter-dog.jpg" autoplay muted loop playsinline aria-label="Yawen kneeling on artificial turf with a black dog, then giving a hand signal."></video>
           <figcaption><b>Training a dog.</b> Practicing a hand-signal sit in the play yard.</figcaption>
@@ -849,7 +914,25 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
       </div>
 
       <h3 class="sub">San Francisco Zoo</h3>
-      <div class="grid-2">
+      <div class="grid-3">
+        <figure>
+          <video class="tall" src="media/people/zoo-armadillo-ball.mp4" poster="media/people/zoo-armadillo-ball.jpg" autoplay muted loop playsinline aria-label="A three-banded armadillo held in two hands rolls itself into a closed ball."></video>
+          <figcaption><b>Three-banded armadillo.</b> When it feels threatened it rolls into a closed ball. Three-banded armadillos are the only armadillos that can close up completely.</figcaption>
+        </figure>
+        <figure>
+          <img class="tall" src="media/people/zoo-armadillo.jpg" alt="An armadillo held belly-up in two hands, showing its soft, furred underside." loading="lazy">
+          <figcaption><b>Ambassador animal.</b> Hard bands on top, soft furred skin underneath: the part the ball protects.</figcaption>
+        </figure>
+        <figure>
+          <video class="tall" src="media/people/zoo-armadillo-walk.mp4" poster="media/people/zoo-armadillo-walk.jpg" autoplay muted loop playsinline aria-label="An armadillo walking along the grass beside a wooden fence."></video>
+          <figcaption><b>Out on the grass.</b> Foraging along the fence line.</figcaption>
+        </figure>
+      </div>
+      <div class="grid-2" style="margin-top:22px">
+        <figure>
+          <img class="tall" src="media/people/zoo-puppy.jpg" alt="Yawen in a green volunteer shirt crouching on a blanket and rubbing the belly of a black-and-white puppy beside its toys." loading="lazy">
+          <figcaption><b>Volunteer shift.</b> Settling a puppy before playtime.</figcaption>
+        </figure>
         <figure>
           <img class="tall" src="media/people/zoo.jpg" alt="Yawen sitting in a car wearing a green San Francisco Zoo jacket." loading="lazy">
           <figcaption><b>San Francisco Zoo.</b></figcaption>
