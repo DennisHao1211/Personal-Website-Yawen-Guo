@@ -196,6 +196,9 @@ figcaption b{color:var(--ink);font-weight:600}
 .win-body p{margin:0 0 16px;font-size:15.5px;max-width:52ch;color:#33463C}
 .win-btn{display:inline-block;font-family:"Archivo",sans-serif;font-size:13px;font-weight:600;color:#fff;background:var(--leaf);padding:8px 15px;border-radius:999px}
 .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.zoo-pair{display:grid;grid-template-columns:555fr 750fr;gap:16px;align-items:start}
+.zoo-pair img{aspect-ratio:auto}
+@media(max-width:520px){.zoo-pair{grid-template-columns:1fr}}
 .tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .tl li{position:relative}
 .tl li::before{content:"";position:absolute;top:7px;left:0;right:-12px;height:2px;background:rgba(79,138,110,.35)}
@@ -957,24 +960,14 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
       </div>
 
       <h3 class="sub">San Francisco Zoo</h3>
-      <div class="grid-3">
+      <div class="zoo-pair">
         <figure>
-          <video class="tall" src="media/people/zoo-armadillo-ball.mp4" poster="media/people/zoo-armadillo-ball.jpg" autoplay muted loop playsinline aria-label="A three-banded armadillo held in two hands rolls itself into a closed ball."></video>
-          <figcaption><b>Three-banded armadillo.</b> When it feels threatened it rolls into a closed ball. Three-banded armadillos are the only armadillos that can close up completely.</figcaption>
+          <img src="media/people/zoo-armadillo.jpg" alt="An armadillo held belly-up in two hands, showing its armored head, long claws and hairy underside." loading="lazy">
+          <figcaption><b>Armadillo, San Francisco Zoo.</b> An animal I had the opportunity to observe up close during my volunteer work at the zoo. Its protective armor, strong claws, and surprisingly hairy underside were fascinating to see.</figcaption>
         </figure>
         <figure>
-          <img class="tall" src="media/people/zoo-armadillo.jpg" alt="An armadillo held belly-up in two hands, showing its soft, furred underside." loading="lazy">
-          <figcaption><b>Ambassador animal.</b> Hard bands on top, soft furred skin underneath: the part the ball protects.</figcaption>
-        </figure>
-        <figure>
-          <video class="tall" src="media/people/zoo-armadillo-walk.mp4" poster="media/people/zoo-armadillo-walk.jpg" autoplay muted loop playsinline aria-label="An armadillo walking along the grass beside a wooden fence."></video>
-          <figcaption><b>Out on the grass.</b> Foraging along the fence line.</figcaption>
-        </figure>
-      </div>
-      <div class="grid-2" style="margin-top:22px">
-        <figure>
-          <img class="tall" src="media/people/zoo.jpg" alt="Yawen sitting in a car wearing a green San Francisco Zoo jacket." loading="lazy">
-          <figcaption><b>San Francisco Zoo.</b></figcaption>
+          <img src="media/people/zoo.jpg" alt="Yawen sitting in a car wearing a green San Francisco Zoo jacket." loading="lazy">
+          <figcaption><b>San Francisco Zoo volunteer.</b></figcaption>
         </figure>
       </div>
     </div>
