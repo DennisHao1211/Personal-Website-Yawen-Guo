@@ -199,12 +199,15 @@ figcaption b{color:var(--ink);font-weight:600}
 .zoo-pair{display:grid;grid-template-columns:555fr 567fr 750fr;gap:14px;align-items:start}
 .zoo-pair img{aspect-ratio:auto}
 .zoo-pair video{aspect-ratio:544/960}
+.pairs{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.pairs>*{min-width:0}
+.pairs .grid-2{gap:10px}
+@media(max-width:860px){.pairs{grid-template-columns:1fr}}
+@media(max-width:520px){.pairs .grid-2{grid-template-columns:1fr 1fr}}
+.cats-row{display:grid;grid-template-columns:750fr 750fr 563fr;gap:14px;align-items:start}
+.cats-row video{aspect-ratio:9/16}
+@media(max-width:520px){.cats-row{grid-template-columns:1fr 1fr}.cats-row figure:last-child{grid-column:1/-1;width:62%;margin:0 auto}}
 @media(max-width:520px){.zoo-pair{grid-template-columns:1fr 1fr}.zoo-pair figure:last-child{grid-column:1/-1}}
-.scroll-wrap{position:relative}
-.scroll-photo{aspect-ratio:3/4;overflow-y:auto;border-radius:4px;scrollbar-width:thin;scrollbar-color:rgba(46,58,52,.35) transparent}
-.scroll-photo img{border-radius:0}
-.scroll-hint{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);font-family:"Archivo",sans-serif;font-size:12px;font-weight:600;color:#fff;background:rgba(30,40,35,.62);padding:5px 12px;border-radius:999px;pointer-events:none;transition:opacity .3s}
-.scroll-wrap.scrolled .scroll-hint{opacity:0}
 .tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .tl li{position:relative}
 .tl li::before{content:"";position:absolute;top:7px;left:0;right:-12px;height:2px;background:rgba(79,138,110,.35)}
@@ -711,28 +714,33 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
           <figcaption><b>Regal jumping spider, <span class="sci">Phidippus regius</span>.</b> Jumping spiders hunt by sight; their two large front eyes give them some of the sharpest vision of any animal their size.</figcaption>
         </figure>
       </div>
-      <h3 class="sub">Juvenile Texas rat snake</h3>
-      <div class="grid-2">
-        <figure>
-          <img class="tall" src="media/home/snake-enclosure.jpg" alt="A glass terrarium with layered substrate, driftwood, a coconut hide and live plants." loading="lazy">
-          <figcaption><b>A little ecosystem I built for my juvenile rat snake.</b> Drainage layer, substrate, driftwood, a coconut hide and live plants.</figcaption>
-        </figure>
-        <figure>
-          <video class="tall" src="media/home/rat-snake-feeding.mp4" poster="media/home/rat-snake-feeding.jpg" autoplay muted loop playsinline aria-label="A young white rat snake swallowing a pinky mouse beside its water dish."></video>
-          <figcaption><b>Feeding.</b> Swallowing a pinky mouse head-first, so the legs fold back instead of catching.</figcaption>
-        </figure>
-      </div>
-
-      <h3 class="sub">Crabs</h3>
-      <div class="grid-2">
-        <figure>
-          <video class="tall" src="media/home/vampire-crab.mp4" poster="media/home/vampire-crab.jpg" autoplay muted loop playsinline aria-label="A purple and red vampire crab eating on wet substrate in a small tank."></video>
-          <figcaption><b>Vampire crab, <span class="sci">Geosesarma</span> sp.</b> A semi-terrestrial crab: it needs both land and shallow water in one enclosure. Here, eating.</figcaption>
-        </figure>
-        <figure>
-          <video class="tall" src="media/home/shore-crab.mp4" poster="media/home/shore-crab.jpg" autoplay muted loop playsinline aria-label="A small striped shore crab tucked under a slate rock on pale gravel in a tank."></video>
-          <figcaption><b>Striped shore crab, <span class="sci">Pachygrapsus crassipes</span>.</b> A crab from California’s rocky shore. By day it wedges itself under the rock, the way it would hide in a crevice at low tide.</figcaption>
-        </figure>
+      <div class="pairs">
+        <div>
+          <h3 class="sub">Juvenile Texas rat snake</h3>
+          <div class="grid-2">
+            <figure>
+              <img class="tall" src="media/home/snake-enclosure.jpg" alt="A glass terrarium with layered substrate, driftwood, a coconut hide and live plants." loading="lazy">
+              <figcaption><b>A little ecosystem I built for my juvenile rat snake.</b> Drainage layer, substrate, driftwood, a coconut hide and live plants.</figcaption>
+            </figure>
+            <figure>
+              <video class="tall" src="media/home/rat-snake-feeding.mp4" poster="media/home/rat-snake-feeding.jpg" autoplay muted loop playsinline aria-label="A young white rat snake swallowing a pinky mouse beside its water dish."></video>
+              <figcaption><b>Feeding.</b> Swallowing a pinky mouse head-first, so the legs fold back instead of catching.</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div>
+          <h3 class="sub">Crabs</h3>
+          <div class="grid-2">
+            <figure>
+              <video class="tall" src="media/home/vampire-crab.mp4" poster="media/home/vampire-crab.jpg" autoplay muted loop playsinline aria-label="A purple and red vampire crab eating on wet substrate in a small tank."></video>
+              <figcaption><b>Vampire crab, <span class="sci">Geosesarma</span> sp.</b> A semi-terrestrial crab: it needs both land and shallow water in one enclosure. Here, eating.</figcaption>
+            </figure>
+            <figure>
+              <video class="tall" src="media/home/shore-crab.mp4" poster="media/home/shore-crab.jpg" autoplay muted loop playsinline aria-label="A small striped shore crab tucked under a slate rock on pale gravel in a tank."></video>
+              <figcaption><b>Striped shore crab, <span class="sci">Pachygrapsus crassipes</span>.</b> A crab from California’s rocky shore. By day it wedges itself under the rock, the way it would hide in a crevice at low tide.</figcaption>
+            </figure>
+          </div>
+        </div>
       </div>
 
       <h3 class="sub">Growth series: spiny flower mantis</h3>
@@ -756,16 +764,19 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
         </figure>
       </div>
 
-      <div class="grid-2" style="margin-top:22px">
+      <h3 class="sub">Our cats</h3>
+      <div class="cats-row">
         <figure>
-          <img class="tall" src="media/home/cats-tree.jpg" alt="Two cats, a calico and a cream tabby, each sitting in a cubby of a cat tree." loading="lazy">
-          <figcaption><b>Our cats, Yogurt and Lemon.</b></figcaption>
+          <img class="tall" src="media/home/yogurt.jpg" alt="Yogurt, a long-haired calico cat with a white chest, loafing on a green and white rug." loading="lazy">
+          <figcaption><b>Yogurt</b>, 5 years old</figcaption>
         </figure>
-        <figure class="scroll-wrap">
-          <div class="scroll-photo">
-            <img src="media/home/cats.jpg" alt="Three photos of a cream-colored cat lying on its back on blankets." loading="lazy">
-          </div>
-          <span class="scroll-hint">Scroll ↓</span>
+        <figure>
+          <img class="tall" src="media/home/lemon.jpg" alt="Lemon, a cream-colored cat with green eyes, loafing on a black office chair." loading="lazy">
+          <figcaption><b>Lemon</b>, 2 years old</figcaption>
+        </figure>
+        <figure>
+          <video src="media/home/cats-window.mp4" poster="media/home/cats-window.jpg" autoplay muted loop playsinline aria-label="Yogurt on the back of an armchair and Lemon on its seat, both looking out a window at trees."></video>
+          <figcaption><b>Yogurt and Lemon</b> at the window.</figcaption>
         </figure>
       </div>
     </div>
@@ -1119,13 +1130,6 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
     if (scrollY < document.getElementById("top").offsetHeight * 0.5)
       links.forEach(function(a){ a.classList.remove("on"); });
   }, {passive:true});
-
-  /* 卷轴照片：滚动后隐藏提示 */
-  document.querySelectorAll(".scroll-photo").forEach(function(el){
-    el.addEventListener("scroll", function(){
-      if (el.scrollTop > 8) el.parentNode.classList.add("scrolled");
-    }, {passive:true});
-  });
 
   /* ------------------------------------------------ 3. 图片灯箱 ---- */
   var lb = document.getElementById("lb"),
