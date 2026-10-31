@@ -196,9 +196,15 @@ figcaption b{color:var(--ink);font-weight:600}
 .win-body p{margin:0 0 16px;font-size:15.5px;max-width:52ch;color:#33463C}
 .win-btn{display:inline-block;font-family:"Archivo",sans-serif;font-size:13px;font-weight:600;color:#fff;background:var(--leaf);padding:8px 15px;border-radius:999px}
 .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.zoo-pair{display:grid;grid-template-columns:555fr 750fr;gap:16px;align-items:start}
+.zoo-pair{display:grid;grid-template-columns:555fr 567fr 750fr;gap:14px;align-items:start}
 .zoo-pair img{aspect-ratio:auto}
-@media(max-width:520px){.zoo-pair{grid-template-columns:1fr}}
+.zoo-pair video{aspect-ratio:544/960}
+@media(max-width:520px){.zoo-pair{grid-template-columns:1fr 1fr}.zoo-pair figure:last-child{grid-column:1/-1}}
+.scroll-wrap{position:relative}
+.scroll-photo{aspect-ratio:3/4;overflow-y:auto;border-radius:4px;scrollbar-width:thin;scrollbar-color:rgba(46,58,52,.35) transparent}
+.scroll-photo img{border-radius:0}
+.scroll-hint{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);font-family:"Archivo",sans-serif;font-size:12px;font-weight:600;color:#fff;background:rgba(30,40,35,.62);padding:5px 12px;border-radius:999px;pointer-events:none;transition:opacity .3s}
+.scroll-wrap.scrolled .scroll-hint{opacity:0}
 .tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .tl li{position:relative}
 .tl li::before{content:"";position:absolute;top:7px;left:0;right:-12px;height:2px;background:rgba(79,138,110,.35)}
@@ -755,9 +761,11 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
           <img class="tall" src="media/home/cats-tree.jpg" alt="Two cats, a calico and a cream tabby, each sitting in a cubby of a cat tree." loading="lazy">
           <figcaption><b>Our cats, Yogurt and Lemon.</b></figcaption>
         </figure>
-        <figure>
-          <img class="tall" src="media/home/cats.jpg" alt="Three photos of a cream-colored cat lying on its back on blankets." loading="lazy" style="object-fit:contain;background:var(--paper-2)">
-          <figcaption><b>Off duty.</b></figcaption>
+        <figure class="scroll-wrap">
+          <div class="scroll-photo">
+            <img src="media/home/cats.jpg" alt="Three photos of a cream-colored cat lying on its back on blankets." loading="lazy">
+          </div>
+          <span class="scroll-hint">Scroll ↓</span>
         </figure>
       </div>
     </div>
@@ -969,6 +977,10 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
           <figcaption><b>Armadillo, San Francisco Zoo.</b> An animal I had the opportunity to observe up close during my volunteer work at the zoo. Its protective armor, strong claws, and surprisingly hairy underside were fascinating to see.</figcaption>
         </figure>
         <figure>
+          <video src="media/people/zoo-armadillo-walk.mp4" poster="media/people/zoo-armadillo-walk.jpg" autoplay muted loop playsinline aria-label="An armadillo running along the grass beside a wooden fence."></video>
+          <figcaption><b>On the move.</b> Running along the fence line on the grass.</figcaption>
+        </figure>
+        <figure>
           <img src="media/people/zoo.jpg" alt="Yawen sitting in a car wearing a green San Francisco Zoo jacket." loading="lazy">
           <figcaption><b>San Francisco Zoo volunteer.</b></figcaption>
         </figure>
@@ -1107,6 +1119,13 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
     if (scrollY < document.getElementById("top").offsetHeight * 0.5)
       links.forEach(function(a){ a.classList.remove("on"); });
   }, {passive:true});
+
+  /* 卷轴照片：滚动后隐藏提示 */
+  document.querySelectorAll(".scroll-photo").forEach(function(el){
+    el.addEventListener("scroll", function(){
+      if (el.scrollTop > 8) el.parentNode.classList.add("scrolled");
+    }, {passive:true});
+  });
 
   /* ------------------------------------------------ 3. 图片灯箱 ---- */
   var lb = document.getElementById("lb"),
