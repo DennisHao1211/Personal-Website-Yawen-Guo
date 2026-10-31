@@ -137,6 +137,7 @@ section{scroll-margin-top:66px;padding:74px 0 8px}
 .sec-head p{margin:0;max-width:58ch;color:#33463C}
 
 .body-grid{display:grid;grid-template-columns:var(--marg) 1fr;gap:40px}
+.body-grid>*{min-width:0}
 .side{font-family:"Archivo",sans-serif;font-size:12.5px;color:var(--ink-2);line-height:1.7}
 .side dl{margin:0}
 .side dt{color:var(--ink);font-weight:600;margin-top:14px}
@@ -177,20 +178,40 @@ figcaption b{color:var(--ink);font-weight:600}
 }
 .note .slot{aspect-ratio:1;margin:0}
 .note.text-only{grid-template-columns:1fr}
+.note>*{min-width:0}
 .sub{font-family:"Archivo",sans-serif;font-size:13.5px;font-weight:600;color:var(--leaf);margin:40px 0 4px}
 .sub-note{font-family:"Archivo",sans-serif;font-size:12.5px;color:var(--ink-2);margin:0 0 12px;max-width:64ch}
 .oak{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
-.oak img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:4px;display:block}
+.oak img{width:100%;aspect-ratio:9/8;object-fit:cover;border-radius:4px;display:block}
 .oak .credit{font-family:"Archivo",sans-serif;font-size:11.5px;color:var(--ink-2);margin-top:5px}
-.win{margin-top:14px;border:1px solid var(--rule);border-radius:8px;overflow:hidden;background:#fff;display:flex;flex-direction:column;min-height:340px}
+.win{margin-top:14px;border:1px solid var(--rule);border-radius:8px;overflow:hidden;background:#fff;display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:border-color .18s,box-shadow .18s}
+.win:hover{border-color:var(--leaf);box-shadow:0 6px 20px -12px rgba(46,58,52,.4)}
 .win-bar{display:flex;align-items:center;gap:10px;padding:7px 12px;background:var(--paper-2);border-bottom:1px solid var(--rule);font-family:"Archivo",sans-serif;font-size:12px;color:var(--ink-2)}
 .win-bar i{width:9px;height:9px;border-radius:50%;background:rgba(46,58,52,.18);display:inline-block}
 .win-bar span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.win-bar a{color:var(--leaf);font-weight:600;text-decoration:none;white-space:nowrap}
-.win iframe{flex:1;width:100%;border:0;min-height:300px}
+.win-bar b{color:var(--leaf);font-weight:600;white-space:nowrap}
+.win-body{padding:26px 26px 24px}
+.win-site{font-family:"Archivo",sans-serif;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.win-title{font-family:"Spectral",Georgia,serif;font-size:28px;line-height:1.15;margin:6px 0 8px;color:var(--ink)}
+.win-body p{margin:0 0 16px;font-size:15.5px;max-width:52ch;color:#33463C}
+.win-btn{display:inline-block;font-family:"Archivo",sans-serif;font-size:13px;font-weight:600;color:#fff;background:var(--leaf);padding:8px 15px;border-radius:999px}
 .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.hb{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.hb figcaption{margin-top:4px}
+.zoo-pair{display:grid;grid-template-columns:555fr 750fr;gap:16px;align-items:start}
+.zoo-pair img{aspect-ratio:auto}
+@media(max-width:520px){.zoo-pair{grid-template-columns:1fr}}
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tl li{position:relative}
+.tl li::before{content:"";position:absolute;top:7px;left:0;right:-12px;height:2px;background:rgba(79,138,110,.35)}
+.tl li:last-child::before{right:0}
+.tl-when{position:relative;display:inline-flex;align-items:center;gap:8px;padding-right:8px;background:var(--paper);font-family:"Archivo",sans-serif;font-size:12px;font-weight:600;color:var(--ink);margin-bottom:10px;white-space:nowrap}
+.tl-dot{width:16px;height:16px;border-radius:50%;background:var(--leaf);border:4px solid var(--paper);box-shadow:0 0 0 1px rgba(79,138,110,.45);flex:none}
+.tl-day{font-weight:400;color:var(--ink-2)}
+.tl-ref img{outline:2px solid var(--leaf);outline-offset:3px}
+.tl-tag{display:block;margin-top:3px;color:var(--leaf);font-weight:600}
+.compare{position:relative}
+.compare::after{content:"→";position:absolute;left:50%;top:38%;transform:translate(-50%,-50%);width:36px;height:36px;border-radius:50%;background:var(--paper);border:1px solid var(--rule);display:grid;place-items:center;font-family:"Archivo",sans-serif;font-size:17px;color:var(--leaf);pointer-events:none}
+@media(max-width:860px){.tl{grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:44%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}.tl li{scroll-snap-align:start}}
+@media(max-width:520px){.tl{grid-auto-columns:70%}.compare::after{display:none}}
 @media(max-width:860px){.grid-4{grid-template-columns:repeat(2,1fr)}}
 .chars{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
 main .chars figure img{aspect-ratio:3/4;object-fit:contain;background:#fff;border:1px solid var(--rule)}
@@ -575,14 +596,19 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
           <div class="oak">
             <img src="media/field/rash.jpg" alt="The back of a hand and wrist with a line of red, raised blisters." loading="lazy">
             <div>
-              <img src="media/field/poison-oak-leaf.jpg" alt="Poison oak: glossy green leaves in groups of three." loading="lazy">
+              <img src="media/field/poison-oak-leaf.jpg" alt="Poison oak: glossy green leaves in groups of three." loading="lazy" style="object-position:42% 50%">
               <div class="credit">Poison oak. Photo: Heather Diaz, Midpeninsula Regional Open Space District.</div>
             </div>
           </div>
-          <div class="win">
-              <div class="win-bar"><i></i><i></i><i></i><span>openspace.org · Poison Oak</span><a href="https://www.openspace.org/where-to-go/nature/poison-oak" target="_blank" rel="noopener">Open ↗</a></div>
-              <iframe src="https://www.openspace.org/where-to-go/nature/poison-oak" title="Poison Oak — Midpeninsula Regional Open Space District" loading="lazy" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
-          </div>
+          <a class="win" href="https://www.openspace.org/where-to-go/nature/poison-oak" target="_blank" rel="noopener">
+            <div class="win-bar"><i></i><i></i><i></i><span>openspace.org/where-to-go/nature/poison-oak</span><b>Open ↗</b></div>
+            <div class="win-body">
+              <div class="win-site">Midpeninsula Regional Open Space District</div>
+              <div class="win-title">Poison Oak</div>
+              <p>Midpen’s nature guide to poison oak, the plant behind the rash above.</p>
+              <span class="win-btn">Read the guide on openspace.org ↗</span>
+            </div>
+          </a>
         </div>
       </div>
 
@@ -776,19 +802,39 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
       </dl>
     </div>
     <div>
-      <div class="grid-2">
-        <div>
-          <div class="hb">
-            <figure><img class="tall" src="media/art/hb-1.jpg" alt="Two small white hummingbird eggs in a cup nest." loading="lazy"><figcaption><b>1.</b> Eggs</figcaption></figure>
-            <figure><img class="tall" src="media/art/hb-2.jpg" alt="Two newly hatched hummingbird chicks with pin feathers in the nest." loading="lazy"><figcaption><b>2.</b> Hatchlings</figcaption></figure>
-            <figure><img class="tall" src="media/art/hummingbird-photo.jpg" alt="Two hummingbird nestlings in the nest, beaks pointed up and open." loading="lazy"><figcaption><b>3.</b> Nestlings</figcaption></figure>
-            <figure><img class="tall" src="media/art/hb-4.jpg" alt="Two nearly grown hummingbird fledglings filling the nest on a fig branch." loading="lazy"><figcaption><b>4.</b> Ready to fledge</figcaption></figure>
-          </div>
-          <p class="sub-note" style="margin-top:8px"><b>Observed.</b> Hummingbird nestlings in the fig tree, summer 2024: from eggs to leaving the nest.</p>
-        </div>
+      <h3 class="sub" style="margin-top:0">From egg to fledgling</h3>
+      <p class="sub-note">Hummingbird nestlings in the fig tree, summer 2024: four photos of the same nest, 36 days from the first to the last.</p>
+      <ol class="tl">
+        <li><figure>
+          <div class="tl-when"><span class="tl-dot"></span>May 27, 2024</div>
+          <img class="tall" src="media/art/hb-1.jpg" alt="Two small white hummingbird eggs in a cup nest lined with plant down." loading="lazy">
+          <figcaption><b>Eggs.</b> Incubation stage.</figcaption>
+        </figure></li>
+        <li><figure>
+          <div class="tl-when"><span class="tl-dot"></span>June 10 <span class="tl-day">· day 14</span></div>
+          <img class="tall" src="media/art/hb-2.jpg" alt="Two young hummingbird nestlings with dark skin and sparse pin feathers in the nest." loading="lazy">
+          <figcaption><b>Young nestlings.</b> Early nestling stage.</figcaption>
+        </figure></li>
+        <li><figure>
+          <div class="tl-when"><span class="tl-dot"></span>June 26 <span class="tl-day">· day 30</span></div>
+          <img class="tall" src="media/art/hb-3.jpg" alt="Two feathered hummingbird nestlings filling the nest on a fig branch, bills pointing up." loading="lazy">
+          <figcaption><b>Nestlings.</b> Late nestling stage.</figcaption>
+        </figure></li>
+        <li class="tl-ref"><figure>
+          <div class="tl-when"><span class="tl-dot"></span>July 2 <span class="tl-day">· day 36</span></div>
+          <img class="tall" src="media/art/hummingbird-photo.jpg" alt="Two hummingbird nestlings nearly ready to fledge, beaks up and open." loading="lazy">
+          <figcaption><b>Nearly ready to fledge.</b> <span class="tl-tag">Painted from this photo ↓</span></figcaption>
+        </figure></li>
+      </ol>
+
+      <div class="grid-2 compare" style="margin-top:28px">
+        <figure>
+          <img class="tall" src="media/art/hummingbird-photo.jpg" alt="Photo of two hummingbird nestlings in a cup nest on a fig branch, beaks pointed up and open." loading="lazy">
+          <figcaption><b>Observed.</b> July 2, 2024, nearly ready to fledge.</figcaption>
+        </figure>
         <figure>
           <img class="tall" src="media/art/drawing1.jpg" alt="Watercolor of the same two hummingbird nestlings in their nest on a branch." loading="lazy">
-          <figcaption><b>Drawn.</b> Watercolor on paper, from that photo: two fledglings in a cup of plant down and spider silk, beaks up and open.</figcaption>
+          <figcaption><b>Drawn.</b> Watercolor on paper, from that photo: two nestlings in a cup of plant down and spider silk, beaks up and open.</figcaption>
         </figure>
       </div>
       <div class="grid-3" style="margin-top:22px">
@@ -914,28 +960,14 @@ footer{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
       </div>
 
       <h3 class="sub">San Francisco Zoo</h3>
-      <div class="grid-3">
+      <div class="zoo-pair">
         <figure>
-          <video class="tall" src="media/people/zoo-armadillo-ball.mp4" poster="media/people/zoo-armadillo-ball.jpg" autoplay muted loop playsinline aria-label="A three-banded armadillo held in two hands rolls itself into a closed ball."></video>
-          <figcaption><b>Three-banded armadillo.</b> When it feels threatened it rolls into a closed ball. Three-banded armadillos are the only armadillos that can close up completely.</figcaption>
+          <img src="media/people/zoo-armadillo.jpg" alt="An armadillo held belly-up in two hands, showing its armored head, long claws and hairy underside." loading="lazy">
+          <figcaption><b>Armadillo, San Francisco Zoo.</b> An animal I had the opportunity to observe up close during my volunteer work at the zoo. Its protective armor, strong claws, and surprisingly hairy underside were fascinating to see.</figcaption>
         </figure>
         <figure>
-          <img class="tall" src="media/people/zoo-armadillo.jpg" alt="An armadillo held belly-up in two hands, showing its soft, furred underside." loading="lazy">
-          <figcaption><b>Ambassador animal.</b> Hard bands on top, soft furred skin underneath: the part the ball protects.</figcaption>
-        </figure>
-        <figure>
-          <video class="tall" src="media/people/zoo-armadillo-walk.mp4" poster="media/people/zoo-armadillo-walk.jpg" autoplay muted loop playsinline aria-label="An armadillo walking along the grass beside a wooden fence."></video>
-          <figcaption><b>Out on the grass.</b> Foraging along the fence line.</figcaption>
-        </figure>
-      </div>
-      <div class="grid-2" style="margin-top:22px">
-        <figure>
-          <img class="tall" src="media/people/zoo-puppy.jpg" alt="Yawen in a green volunteer shirt crouching on a blanket and rubbing the belly of a black-and-white puppy beside its toys." loading="lazy">
-          <figcaption><b>Volunteer shift.</b> Settling a puppy before playtime.</figcaption>
-        </figure>
-        <figure>
-          <img class="tall" src="media/people/zoo.jpg" alt="Yawen sitting in a car wearing a green San Francisco Zoo jacket." loading="lazy">
-          <figcaption><b>San Francisco Zoo.</b></figcaption>
+          <img src="media/people/zoo.jpg" alt="Yawen sitting in a car wearing a green San Francisco Zoo jacket." loading="lazy">
+          <figcaption><b>San Francisco Zoo volunteer.</b></figcaption>
         </figure>
       </div>
     </div>
